@@ -18,6 +18,9 @@ public class Main {
         System.out.println(dis1);
         System.out.println(sym1);
         
+        
+        //Hellou
+        
         KieServices ks = KieServices.Factory.get();
         KieContainer kc = ks.getKieClasspathContainer();
 

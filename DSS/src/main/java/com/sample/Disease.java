@@ -45,6 +45,7 @@ public class Disease {
 			this.Pulmonary_Embolism = 0;
 			this.Cold = 0;
 			this.Flu = 0;
+			//this.hola
 		}
 
 	
