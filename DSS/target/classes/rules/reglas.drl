@@ -1,4 +1,6 @@
 //created on: 24 feb 2023
+
+//TODO Comprobar que están bien
 package rules
 
 import com.sample.Disease;
@@ -157,13 +159,459 @@ rule "Dizziness"
 
 end
 
+rule "Fainting or loss of consciousness"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Fainting_or_loss_of_consciousness == true )
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 1);
+
+end
+
+rule "Excessive Daytime Sleepiness"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Excessive_daytime_sleepiness == true )
+    then
+        disease.setApnea(disease.getApnea() + 3);
+
+end
+
+rule "Difficulty Concentrating"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Difficulty_concentrating == true )
+    then
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 2);
+        disease.setApnea(disease.getApnea() + 2);
+
+end
+
+rule "Irritability"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Irritability == true )
+    then
+        disease.setApnea(disease.getApnea() + 2);
+
+end
+
+rule "Depression"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Depression == true )
+    then
+
+        disease.setApnea(disease.getApnea() + 1);
+
+end
+
+rule "Anxiety"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Anxiety == true )
+    then
+        disease.setApnea(disease.getApnea() + 1);
+        disease.setAsthma(disease.getAsthma() + 2);
+
+end
+
+rule "Restless Sleep"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Restless_sleep == true )
+    then
+
+        disease.setApnea(disease.getApnea() + 3);
+end
+
+rule "Insomnia"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Insomnia == true )
+    then
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 1);
+        disease.setApnea(disease.getApnea() + 2);
+
+end
+
+rule "Dry Mouth Or Sore Throat"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Dry_mouth_or_sore_throat == true )
+    then
+        disease.setCOVID(disease.getCOVID() + 1);
+        disease.setCold(disease.getCold() + 2);
+        disease.setApnea(disease.getApnea() + 3);
+        disease.setFlu(disease.getFlu() + 2);
+
+end
+
+rule "Chest Oppression Or/And Discomfort"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Chest_oppression_discomfort == true )
+    then
+        disease.setHyperapnea(disease.getHyperapnea() + 2);
+        disease.setTachypnea(disease.getTachypnea() + 2);
+        disease.setDysnea(disease.getDysnea() + 2);
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 1);
+        disease.setLung_cancer(disease.getLung_cancer() + 3);
+        disease.setAsthma(disease.getAsthma() + 2);
+
+end
+
+rule "Muscle Or Body Pain"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Muscle_or_body_pain == true )
+    then
+        disease.setHyperapnea(disease.getHyperapnea() + 1);
+        disease.setCOVID(disease.getCOVID() + 2);
+        disease.setFlu(disease.getFlu() + 2);
+
+end
+
+rule "Cough"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Cough == true )
+    then
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 1);
+        disease.setCOVID(disease.getCOVID() + 3);
+        disease.setAsthma(disease.getAsthma() + 2);
+        disease.setEmphysema(disease.getEmphysema() + 2);
+        disease.setBronchitis_Chronic(disease.getBronchitis_Chronic() + 3);
+        disease.setAtelactasis(disease.getAtelactasis() + 2);
+        disease.setPneumonia(disease.getPneumonia() + 3);
+        disease.setMalignant_Pleura_Effusion(disease.getMalignant_Pleura_Effusion() + 2);
+        disease.setFlu(disease.getFlu() + 2);        
+        disease.setCold(disease.getCold() + 2);    
+        
+
+end
+
+rule "Cough with blood"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Cough_blood == true )
+    then
+        disease.setLung_cancer(disease.getLung_cancer() + 3);
+        disease.setPulmonary_Embolism(disease.getPulmonary_Embolism() + 1);
+        disease.setFlu(disease.getFlu() + 3);        
+        disease.setCold(disease.getCold() + 2);    
+        
+
+end
+
+rule "Cough that gets worse over time"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Cough_worse_over_time == true )
+    then
+
+        disease.setLung_cancer(disease.getLung_cancer() + 3);        
+
+end
+
+rule "Difficulty performing physical activities"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Difficulty_physical_activities == true )
+    then
+
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 3);
+
+end
+
+rule "general"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(general == true )
+    then
+
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 2);
+        disease.setLung_cancer(disease.getLung_cancer() + 3);
+        disease.setEmphysema(disease.getEmphysema() + 1);
+        disease.setPneumonia(disease.getPneumonia() + 2);    
+        
+
+end
+
+rule "Hoarseness"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Hoarseness == true )
+    then
+        disease.setLung_cancer(disease.getLung_cancer() + 1);
+        
+
+end
+
+rule "Trouble swallowing"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Trouble_swallowing == true )
+    then
+
+        disease.setLung_cancer(disease.getLung_cancer() + 1);
+        
+
+end
+
+rule "Fever or chills"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Fever_chills == true )
+    then
+
+        disease.setCOVID(disease.getCOVID() + 3);
+        disease.setBronchitis_Chronic(disease.getBronchitis_Chronic() + 1);
+        disease.setPneumonia(disease.getPneumonia() + 3);
+        disease.setFlu(disease.getFlu() + 3);                
+
+end
+
+rule "Loss of taste or smell"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Loss_taste_smell == true )
+    then
+        
+        disease.setCOVID(disease.getCOVID() + 3);
+        
+
+end
+
+rule "Congestion or running nose"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Congestion_or_running_nose == true )
+    then
+        disease.setCOVID(disease.getCOVID() + 1);
+        disease.setFlu(disease.getFlu() + 3);        
+        disease.setCold(disease.getCold() + 3);    
+        
+
+end
+
+rule "Nausea or vomiting"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Nausea_vomiting == true )
+    then
+
+        disease.setCOVID(disease.getCOVID() + 1);
+        disease.setPneumonia(disease.getPneumonia() + 1);
+        
+end
+
+rule "Inflammation of the respiratory tract"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Inflammation_respiratory_tract == true )
+    then
+        
+        disease.setAsthma(disease.getAsthma() + 2);
+        disease.setBronchitis_Chronic(disease.getBronchitis_Chronic() + 3);
+
+end
+
+rule "Sweating"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Sweating == true )
+    then
+        
+        disease.setHyperapnea(disease.getHyperapnea() + 2);
+        disease.setDysnea(disease.getDysnea() + 1);
+        disease.setAsthma(disease.getAsthma() + 1);
+        disease.setPneumonia(disease.getPneumonia() + 3);
+        
+
+end
+
+rule "Mucus"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Mucus == true )
+    then
+        disease.setLung_cancer(disease.getLung_cancer() + 3);
+        disease.setBronchitis_Chronic(disease.getBronchitis_Chronic() + 2);
+        disease.setPneumonia(disease.getPneumonia() + 3);
+        disease.setFlu(disease.getFlu() + 3);        
+        disease.setCold(disease.getCold() + 3);    
+        
+
+end
+
+rule "Expectoration"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Expectoration == true )
+    then
+        
+        disease.setBronchitis_Chronic(disease.getBronchitis_Chronic() + 3);
+        disease.setAtelactasis(disease.getAtelactasis() + 2);
+        
+
+end
+
+rule "Stridor"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Stridor == true )
+    then
+
+        disease.setAtelactasis(disease.getAtelactasis() + 1);  
+        
+
+end
+
+rule "Tachycardia"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Tachycardia == true )
+    then
+
+        disease.setAtelactasis(disease.getAtelactasis() + 1);
+
+end
+
+rule "Hyperthermia"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Hyperthermia == true )
+    then
+
+        disease.setAtelactasis(disease.getAtelactasis() + 1); 
+        
+
+end
+
+rule "Loss of negative_pressure"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Loss_negative_pressure == true )
+    then
+
+        disease.setPneumothorax(disease.getPneumothorax() + 2);
+        
+
+end
+
+rule "Sneezing"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Sneezing == true )
+    then
+             
+        disease.setCold(disease.getCold() + 3);    
+        
+end
 
 
+rule "Chronic cough"
+    dialect "java"
 
+    when
+    	disease: Disease()
+        symptom: Symptoms(Chronic_cough == true )
+    then
+        se.getRespiratory_Insufficiency() + 1);
+        disease.setLung_cancer(disease.getLung_cancer() + 3);
+        
 
+end
 
+/*
+rule "general"
+    dialect "java"
 
+    when
+    	disease: Disease()
+        symptom: Symptoms(general == true )
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + );
+        disease.setApnea(disease.getApnea() + );
+        disease.setHyperapnea(disease.getHyperapnea() + );
+        disease.setTachypnea(disease.getTachypnea() + );
+        disease.setDysnea(disease.getDysnea() + );
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + );
+        disease.setLung_cancer(disease.getLung_cancer() + );
+        disease.setCOVID(disease.getCOVID() + );
+        disease.setAsthma(disease.getAsthma() + );
+        disease.setEmphysema(disease.getEmphysema() + );
+        disease.setBronchitis_Chronic(disease.getBronchitis_Chronic() + );
+        disease.setAtelactasis(disease.getAtelactasis() + );
+        disease.setPneumothorax(disease.getPneumothorax() + );
+        disease.setPneumonia(disease.getPneumonia() + );
+        disease.setMalignant_Pleura_Effusion(disease.getMalignant_Pleura_Effusion() + );
+        disease.setPulmonary_Embolism(disease.getPulmonary_Embolism() + );
+        disease.setFlu(disease.getFlu() + );        
+        disease.setCold(disease.getCold() + );    
+        
 
-
-
-
+end*/

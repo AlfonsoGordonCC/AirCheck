@@ -12,23 +12,43 @@ public class Symptoms {
 	boolean Chest_pain;
 	boolean Fatigue_Weakness; 
 	boolean Dizziness;
-
-	public Symptoms(boolean shortness_breath, boolean rapid_Breathing, boolean wheezing, boolean cyanosis,
-			boolean headache, boolean confusion_Disorientation, boolean irregular_heartbeat, boolean chest_pain,
-			boolean fatigue_Weakness, boolean dizziness) {
-		Shortness_breath = shortness_breath;
-		Rapid_Breathing = rapid_Breathing;
-		Wheezing = wheezing;
-		Cyanosis = cyanosis;
-		Headache = headache;
-		Confusion_Disorientation = confusion_Disorientation;
-		Irregular_heartbeat = irregular_heartbeat;
-		Chest_pain = chest_pain;
-		Fatigue_Weakness = fatigue_Weakness;
-		Dizziness = dizziness;
-	}
+	boolean Fainting_or_loss_of_consciousness;
+	boolean Excessive_daytime_sleepiness;
+	boolean Difficulty_concentrating;
+	boolean Irritability;
+	boolean Depression;
+	boolean Anxiety;
+	boolean Restless_sleep;
+	boolean Insomnia;
+	boolean Dry_mouth_or_sore_throat;
+	boolean Chest_oppression_discomfort;
+	boolean Muscle_or_body_pain;
+	boolean Cough;
+	boolean Cough_blood;
+	boolean Cough_worse_over_time;
+	boolean Difficulty_physical_activities;
+	boolean Loss_appetite_weight;
+	boolean Hoarseness;
+	boolean Trouble_swallowing;
+	boolean Fever_chills;
+	boolean Loss_taste_smell;
+	boolean Congestion_or_running_nose;
 	
+	boolean Nausea_vomiting;
+	boolean Inflammation_respiratory_tract;
+	boolean Sweating;
+	boolean Mucus;
+	boolean Expectoration;
+	boolean Stridor;
+	boolean Tachycardia;
+	boolean Hyperthermia;
+	boolean Loss_negative_pressure;
+	boolean Sneezing;
+	boolean Chronic_cough;
 
+	//TODO Hacer constructor una vez todos los sintomas estén metidos 
+	
+	
 	public boolean isShortness_breath() {
 		return Shortness_breath;
 	}
