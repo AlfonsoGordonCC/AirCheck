@@ -13,6 +13,7 @@ public class Main {
 		 fatigue_Weakness= false, dizziness= true;
 		
 		Disease dis1 = new Disease();
+		
 		Symptoms sym1 = new Symptoms(shortness_breath, rapid_Breathing, wheezing, cyanosis, headache, 
 				confusion_Disorientation, irregular_heartbeat, chest_pain, fatigue_Weakness, dizziness);
         System.out.println(dis1);

@@ -47,6 +47,22 @@ public class Symptoms {
 
 	
 	
+	
+	public Symptoms(boolean shortness_breath, boolean rapid_Breathing, boolean wheezing, boolean cyanosis,
+			boolean headache, boolean confusion_Disorientation, boolean irregular_heartbeat, boolean chest_pain,
+			boolean fatigue_Weakness, boolean dizziness) {
+		Shortness_breath = shortness_breath;
+		Rapid_Breathing = rapid_Breathing;
+		Wheezing = wheezing;
+		Cyanosis = cyanosis;
+		Headache = headache;
+		Confusion_Disorientation = confusion_Disorientation;
+		Irregular_heartbeat = irregular_heartbeat;
+		Chest_pain = chest_pain;
+		Fatigue_Weakness = fatigue_Weakness;
+		Dizziness = dizziness;
+	}
+
 	public Symptoms(boolean shortness_breath, boolean rapid_Breathing, boolean wheezing, boolean cyanosis,
 			boolean headache, boolean confusion_Disorientation, boolean irregular_heartbeat, boolean chest_pain,
 			boolean fatigue_Weakness, boolean dizziness, boolean fainting_or_loss_of_consciousness,
