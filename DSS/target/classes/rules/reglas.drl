@@ -354,12 +354,12 @@ rule "Difficulty performing physical activities"
 
 end
 
-rule "general"
+rule "Loss of appetite and weight"
     dialect "java"
 
     when
     	disease: Disease()
-        symptom: Symptoms(general == true )
+        symptom: Symptoms(Loss_appetite_weight == true )
     then
 
         disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 2);
@@ -578,9 +578,9 @@ rule "Chronic cough"
 
     when
     	disease: Disease()
-        symptom: Symptoms(Chronic_cough == true )
+        symptom: Symptoms(Chronic_cough == true)
     then
-        se.getRespiratory_Insufficiency() + 1);
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 1);
         disease.setLung_cancer(disease.getLung_cancer() + 3);
         
 
