@@ -2,10 +2,12 @@ package db.interfaces;
 
 import db.pojos.users.User;
 
+//import db.pojos.users.User;
+
 public interface UserManager {
-	
 	public void connect();
 	public void disconnect();
+	
 	public void newUser(User u);
 	public User checkPassword(String email, String password);
 	public Boolean checkEmail(String email);
