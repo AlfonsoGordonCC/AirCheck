@@ -1,4 +1,6 @@
 package com.sample;
+import java.io.IOException;
+
 //comentao
 import org.kie.api.KieServices;
 import org.kie.api.runtime.*;
@@ -6,7 +8,7 @@ import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		
 		boolean shortness_breath = false,  rapid_Breathing= true,  wheezing= false,  cyanosis= false,
 		 headache= false,  confusion_Disorientation= true,  irregular_heartbeat= false,  chest_pain= false,
