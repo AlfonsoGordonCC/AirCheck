@@ -19,8 +19,12 @@ public class User implements Serializable{
 		pkColumnName = "name", valueColumnName = "seq", pkColumnValue = "users")
 	private Integer id;
 	private String email;
+	
+	
 	@Lob
 	private byte[] password;
+	
+	
 	
 	public User() {
 		super();
