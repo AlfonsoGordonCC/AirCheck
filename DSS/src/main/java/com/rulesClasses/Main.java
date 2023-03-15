@@ -1,4 +1,4 @@
-package com.sample;
+package com.rulesClasses;
 import java.io.IOException;
 
 //comentao
