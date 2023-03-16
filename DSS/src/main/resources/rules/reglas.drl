@@ -5,7 +5,7 @@ package rules
 
 import com.sample.Disease;
 import com.sample.Symptoms;
-
+import com.sample.Medicines;
 
 rule "Shortness of breath"
     dialect "java"
@@ -585,6 +585,97 @@ rule "Chronic cough"
         
 
 end
+/*
+rule "Fever or chills2"
+	dialect "java"
+	when
+		medicine: Medicine()
+		symptom: Symptoms(Fever_chills == true)
+then
+		medicine.setNSAIDs(medicine.isNSAIDs() - 0.6);
+		medicine.setAntibiotics(medicine.isAntibiotics() - 0.9);
+		medicine.setAntidepressants(medicine.isAntidepressants() - 0.6);
+		medicine.setACE_inhibitors(medicine.isACE_inhibitors() - 0.3);
+		medicine.setBeta_Blockers(medicine.isBeta_Blockers() - 0.3);
+		medicine.setAntipsychotics(medicine.isAntipsychotics() - 0.6);
+		medicine.setChemotherapy_drugs(medicine.isChemotherapy_drugs() - 0.9);      
+		medicine.setAntihistamines(medicine.isAntihistamines() - 0.6);     
+end
+/*
+Rule for Fatigue:
+
+rule "Fatigue"
+dialect "java"
+when
+medicine: Medicine()
+symptom: Symptoms(fatigue == true)
+then
+medicine.setStimulants(medicine.isStimulants() - 3);
+medicine.setAntidepressants(medicine.isAntidepressants() - 2);
+medicine.setAntipsychotics(medicine.isAntipsychotics() - 2);
+medicine.setBronchodilators(medicine.isBronchodilators() - 2);
+medicine.setBeta_Blockers(medicine.isBeta_Blockers() - 1);
+medicine.setNSAIDs(medicine.isNSAIDs() - 2);
+medicine.setAntihistamines(medicine.isAntihistamines() - 1);
+medicine.setChemotherapy_drugs(medicine.isChemotherapy_drugs() - 1);
+medicine.setAntibiotics(medicine.isAntibiotics() - 1);
+end
+
+Rule for Headache:
+
+rule "Headache"
+dialect "java"
+when
+medicine: Medicine()
+symptom: Symptoms(headache == true)
+then
+medicine.setNSAIDs(medicine.isNSAIDs() - 3);
+medicine.setAntidepressants(medicine.isAntidepressants() - 2);
+medicine.setAntipsychotics(medicine.isAntipsychotics() - 2);
+medicine.setBronchodilators(medicine.isBronchodilators() - 2);
+medicine.setStimulants(medicine.isStimulants() - 1);
+medicine.setBeta_Blockers(medicine.isBeta_Blockers() - 1);
+medicine.setAntihistamines(medicine.isAntihistamines() - 1);
+medicine.setChemotherapy_drugs(medicine.isChemotherapy_drugs() - 1);
+medicine.setAntibiotics(medicine.isAntibiotics() - 1);
+end
+
+Rule for Diarrhea:
+
+rule "Diarrhea"
+dialect "java"
+when
+medicine: Medicine()
+symptom: Symptoms(diarrhea == true)
+then
+medicine.setAntibiotics(medicine.isAntibiotics() - 3);
+medicine.setChemotherapy_drugs(medicine.isChemotherapy_drugs() - 2);
+medicine.setAntipsychotics(medicine.isAntipsychotics() - 1);
+medicine.setStimulants(medicine.isStimulants() - 1);
+medicine.set
+/*
+rule "General"
+    dialect "java"
+
+    when
+    	medicine: Medicine()
+        symptom: Symptoms(general == true )
+    then
+        medicine.setBeta_Blockers(medicine.isBeta_Blockers() -);
+        medicine.setNSAIDs(medicine.isNSAIDs() -);
+        medicine.setOpiods(medicine.isOpiods() -);
+        medicine.setStatins(medicine.getisStatins() -);
+        medicine.setBronchodilators(medicine.isBronchodilators() -);
+        medicine.setStimulants(medicine.isStimulants()-);
+        medicine.setAntidepressants(medicine.isAntidepressants() -);
+        medicine.setACE_inhibitors(medicine.isACE_inhibitors() -);
+        medicine.setAntipsychotics(medicine.isAntipsychotics() -);
+        medicine.setChemotherapy_drugs(medicine.isChemotherapy_drugs() -);    
+        medicine.setAntibiotics(medicine.isAntibiotics() -);    
+        medicine.setAntihistamines(medicine.isAntihistamines() -);    
+        medicine.setSSRIs(medicine.isSSRIs() -);    
+
+end
 
 /*
 rule "general"
@@ -615,3 +706,23 @@ rule "general"
         
 
 end*/
+
+/*
+
+Rule "rule 1 for symptom and diseases"
+	dialect "java"
+	when 
+    	p1 : Patient(hasSOF())
+    then
+    	p1.updateHypoxemia(LEVEL.H);
+    	p1.updateHYPERAPNEA(LEVEL.M);
+
+
+Rule "rule 1 for MEDICINE AND SYMPTOMS"
+	dialect "java"
+	when 
+    	p1 : Patient(takesBB())
+    then
+    	p1.updateNegativeEvidenceForBB();
+
+*/

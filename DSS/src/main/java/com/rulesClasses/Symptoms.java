@@ -45,8 +45,10 @@ public class Symptoms {
 	boolean Sneezing;
 	boolean Chronic_cough;
 
-	
-	
+	// deberia ser un enum
+	public Symptoms(String symptom) {
+		
+	}
 	
 	public Symptoms(boolean shortness_breath, boolean rapid_Breathing, boolean wheezing, boolean cyanosis,
 			boolean headache, boolean confusion_Disorientation, boolean irregular_heartbeat, boolean chest_pain,
