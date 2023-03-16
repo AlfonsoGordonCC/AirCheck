@@ -3,9 +3,15 @@
 //TODO Comprobar que están bien
 package rules
 
+<<<<<<< HEAD
 import com.sample.Disease;
 import com.sample.Symptoms;
 import com.sample.Medicines;
+=======
+import com.rulesClasses.Disease;
+import com.rulesClasses.Symptoms;
+
+>>>>>>> branch 'main' of https://github.com/AlfonsoGordonCC/AirCheck.git
 
 rule "Shortness of breath"
     dialect "java"
