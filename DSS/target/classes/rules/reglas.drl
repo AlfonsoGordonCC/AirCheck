@@ -3,8 +3,8 @@
 //TODO Comprobar que están bien
 package rules
 
-import com.sample.Disease;
-import com.sample.Symptoms;
+import com.rulesClasses.Disease;
+import com.rulesClasses.Symptoms;
 
 
 rule "Shortness of breath"

@@ -1,14 +1,29 @@
 package com.rulesClasses;
 import java.io.IOException;
 
+
 //comentao
 import org.kie.api.KieServices;
 import org.kie.api.runtime.*;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
+import db.interfaces.*;
+import db.jdbc.*;
+import db.pojos.users.*;
+
+
 public class Main {
+	
+	private static UserManager dbMan = new DBManagerSQL();
+	//private static UserManager userMan = (UserManager) new User(); //Alfonso? Revisa esto porfi
+	
+	
 	public static void main(String[] args) throws IOException{
+		dbMan.connect();
+	//	userMan.connect();
+		
+		
 		
 		boolean shortness_breath = false,  rapid_Breathing= true,  wheezing= false,  cyanosis= false,
 		 headache= false,  confusion_Disorientation= true,  irregular_heartbeat= false,  chest_pain= false,
