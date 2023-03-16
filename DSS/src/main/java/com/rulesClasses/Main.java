@@ -14,7 +14,6 @@ import db.pojos.users.*;
 
 
 public class Main {
-	
 	private static UserManager dbMan = new DBManagerSQL();
 	//private static UserManager userMan = (UserManager) new User(); //Alfonso? Revisa esto porfi
 	
@@ -61,7 +60,7 @@ public class Main {
        
         // and fire the rules
         ksession.fireAllRules();
-
+        
 
         // AFTER Triggering the rules, the attribute authorized of some operations have been modified
         System.out.println(dis1);
