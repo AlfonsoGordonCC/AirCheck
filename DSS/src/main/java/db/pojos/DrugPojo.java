@@ -16,6 +16,11 @@ public class DrugPojo implements Serializable{
 	
 
 	
+	public DrugPojo(String name) {
+		super();
+		this.name = name;
+	}
+
 	public DrugPojo(Integer id, String name, List<SymptomsPojo> symptoms, List<PatientPojo> patients) {
 		super();
 		this.id = id;

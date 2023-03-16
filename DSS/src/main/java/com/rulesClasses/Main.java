@@ -10,7 +10,7 @@ import org.kie.api.runtime.KieSession;
 
 import db.interfaces.*;
 import db.jdbc.*;
-import db.pojos.users.*;
+import db.pojos.*;
 
 
 public class Main {
@@ -19,7 +19,7 @@ public class Main {
 	
 	
 	public static void main(String[] args) throws IOException{
-		dbMan.connect();
+	//	dbMan.connect();
 	//	userMan.connect();
 		
 		

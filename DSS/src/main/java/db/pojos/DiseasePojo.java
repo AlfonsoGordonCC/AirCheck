@@ -11,21 +11,53 @@ public class DiseasePojo implements Serializable{
 	private String name; 
 	private String basicInfo;
 	private String link;
-	private Integer score;
+	private Float score;
+	private Float score_max;
 	private List<PatientPojo> patient ;//as there's its brother List on Worker class, this conforms a many-to-many relationship 
 	private List<SymptomsPojo> symptoms ;
 	
 
-	public DiseasePojo(Integer id, String name, String basicInfo, String link, Integer score, List<PatientPojo> patient,
-			List<SymptomsPojo> symptoms) {
+
+
+
+	public DiseasePojo(String name, Float score, Float score_max) {
+		super();
+		this.name = name;
+		this.score = score;
+		this.score_max = score_max;
+	}
+
+
+
+	public DiseasePojo(Integer id, String name, String basicInfo, String link, Float score, Float score_max,
+			List<PatientPojo> patient, List<SymptomsPojo> symptoms) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.basicInfo = basicInfo;
 		this.link = link;
 		this.score = score;
+		this.score_max = score_max;
 		this.patient = patient;
 		this.symptoms = symptoms;
+	}
+
+
+
+	public Float getScore_max() {
+		return score_max;
+	}
+
+
+
+	public void setScore_max(Float score_max) {
+		this.score_max = score_max;
+	}
+
+
+
+	public void setScore(Float score) {
+		this.score = score;
 	}
 
 
@@ -88,17 +120,6 @@ public class DiseasePojo implements Serializable{
 		this.link = link;
 	}
 
-
-
-	public Integer getScore() {
-		return score;
-	}
-
-
-
-	public void setScore(Integer score) {
-		this.score = score;
-	}
 	
 	
 	public List<PatientPojo> getPatient() {
@@ -111,11 +132,14 @@ public class DiseasePojo implements Serializable{
 		this.patient = patient;
 	}
 
+
+
 	@Override
 	public String toString() {
 		return "DiseasePojo [id=" + id + ", name=" + name + ", basicInfo=" + basicInfo + ", link=" + link + ", score="
-				+ score + ", patient=" + patient + ", symptoms=" + symptoms + "]";
+				+ score + ", score_max=" + score_max + ", patient=" + patient + ", symptoms=" + symptoms + "]";
 	}
 
+	
 
 }

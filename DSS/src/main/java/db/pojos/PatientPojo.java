@@ -18,10 +18,19 @@ public class PatientPojo implements Serializable { //Serializable is used to hav
 	private List<DiseasePojo> disease ; //as there's its brother List on Worker class, this conforms a many-to-many relationship 
 	private List<DrugPojo> drugs; 
 	private List<SymptomsPojo> symptoms ;
+	
     
 	
 
-	 public PatientPojo(Integer id, String name, Gender gender, Integer age, List<DiseasePojo> disease,
+	 public PatientPojo(String name, List<DiseasePojo> disease, List<DrugPojo> drugs, List<SymptomsPojo> symptoms) {
+		super();
+		this.name = name;
+		this.disease = disease;
+		this.drugs = drugs;
+		this.symptoms = symptoms;
+	}
+
+	public PatientPojo(Integer id, String name, Gender gender, Integer age, List<DiseasePojo> disease,
 			List<DrugPojo> drugs, List<SymptomsPojo> symptoms) {
 		super();
 		this.id = id;
