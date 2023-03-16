@@ -10,18 +10,20 @@ public class DrugPojo implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name; 
-	
 	private List<SymptomsPojo> symptoms ; //as there's its brother List on Worker class, this conforms a many-to-many relationship 
-	private List<DrugPojo> drugs; 
+	private List<PatientPojo> patients; 
 	
 	
-	public DrugPojo() {
-		this.name=name;
-		this.symptoms=symptoms;
-		this.drugs=drugs;
-	}
 
 	
+	public DrugPojo(Integer id, String name, List<SymptomsPojo> symptoms, List<PatientPojo> patients) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.symptoms = symptoms;
+		this.patients = patients;
+	}
+
 	public List<SymptomsPojo> getSymptoms() {
 		return symptoms;
 	}
@@ -30,13 +32,16 @@ public class DrugPojo implements Serializable{
 		this.symptoms = symptoms;
 	}
 
-	public List<DrugPojo> getDrugs() {
-		return drugs;
+
+	public List<PatientPojo> getPatients() {
+		return patients;
 	}
 
-	public void setDrugs(List<DrugPojo> drugs) {
-		this.drugs = drugs;
+
+	public void setPatients(List<PatientPojo> patients) {
+		this.patients = patients;
 	}
+
 
 	public Integer getId() {
 		return id;
@@ -56,6 +61,7 @@ public class DrugPojo implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Symptoms [id=" + id + ",name=" + name +  ",symptoms=" + symptoms +  ",drugs=" + drugs +"]"; 
+		return "DrugPojo [id=" + id + ", name=" + name + ", symptoms=" + symptoms + ", patients=" + patients + "]";
 	}
 }
+	
