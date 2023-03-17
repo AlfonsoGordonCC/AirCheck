@@ -6,28 +6,24 @@ package rules
 
 import com.rulesClasses.Disease;
 import com.rulesClasses.Symptoms;
+import db.pojos.*;
+
+
 
 
 rule "Shortness of breath"
     dialect "java"
 
     when
-    	disease: Disease()
-        symptom: Symptoms(Shortness_breath == true )
+    	patient: PatientPojo(detectSym("shortness_breath") == true) && PatientPojo(detectSymSev("shortness_breath") > 2) && PatientPojo(detectDrug("Betablockers") == true)
     then
-        disease.setHypoxemia(disease.getHypoxemia() + 3);
-        disease.setHyperapnea(disease.getHyperapnea() + 2);
-        disease.setTachypnea(disease.getTachypnea() + 2);
-        disease.setDysnea(disease.getDysnea() + 3);
-        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 3);
-        disease.setLung_cancer(disease.getLung_cancer() + 3);
-        disease.setCOVID(disease.getCOVID() + 3);
-        disease.setPneumonia(disease.getPneumonia() + 3);
-        disease.setPulmonary_Embolism(disease.getPulmonary_Embolism() + 3);
-        disease.setMalignant_Pleura_Effusion(disease.getMalignant_Pleura_Effusion() + 3);    
-
+    
+    	patient.editProb("Hypoxemia",5);
+    	patient.editProb("Apnea",2);
+    	patient.editProb("Hyperapnea",1);
+    	patient.editProb("Dysnea",-2);   
 end
-
+/*
 rule "Rapid breathing"
     dialect "java"
 

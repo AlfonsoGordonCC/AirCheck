@@ -19,7 +19,49 @@ public class PatientPojo implements Serializable { //Serializable is used to hav
 	private List<DrugPojo> drugs; 
 	private List<SymptomsPojo> symptoms ;
 	
+    public boolean detectSym(String name) {
+    	boolean compro= false;
+    	for (int i=0; i< symptoms.size();i++) {
+    		if (symptoms.get(i).getName().equals(name)) {
+    			compro=true;
+    		}
+    	}
+    	return compro;
+    }
     
+    public boolean detectDrug(String name) {
+    	boolean compro= false;
+    	for (int i=0; i< drugs.size();i++) {
+    		if (drugs.get(i).getName().equals(name)) {
+    			compro=true;
+    		}
+    	}
+    	return compro;
+    }
+    
+    public Integer detectSymSev(String name) {
+    	Integer a=0;
+    	for (int i=0; i< symptoms.size();i++) {
+    		if (symptoms.get(i).getName().equals(name)) {
+    			a=symptoms.get(i).getSever();
+    		}
+    		
+    	}
+    	return a;
+    }
+    
+	public void editProb(String name, float points) {
+
+		for (int i = 0; i < disease.size(); i++) {
+			if (disease.get(i).getName().equals(name)) {
+
+				disease.get(i).setScore(disease.get(i).getScore() + points);
+				break;
+			}
+
+		}
+
+	}
 	
 
 	 public PatientPojo(String name, List<DiseasePojo> disease, List<DrugPojo> drugs, List<SymptomsPojo> symptoms) {
