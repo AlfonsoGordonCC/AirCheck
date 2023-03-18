@@ -117,7 +117,6 @@ public class Main {
         
         
      
-        final SymptomsPojo Shortness_breath = new SymptomsPojo(1,"shortness_breath", 0,listaDr,listaP,listaD);
     	final SymptomsPojo Rapid_Breathing = new SymptomsPojo(2,"rapid_breathing", 0,listaDr,listaP,listaD);
     	final SymptomsPojo Wheezing = new SymptomsPojo(3,"wheezing", 0,listaDr,listaP,listaD);
     	final SymptomsPojo Cyanosis = new SymptomsPojo(4,"cyanosis", 0,listaDr,listaP,listaD);
@@ -192,6 +191,9 @@ public class Main {
     	listaDS1.add(Pneumonia);
     	listaDS1.add(Malignant_Pleura_Effusion);
     	listaDS1.add(Pulmonary_Embolism);
+    	
+        final SymptomsPojo Shortness_breath = new SymptomsPojo(1,"shortness_breath", 0,listaDr,listaP,listaDS1);
+
     	
     	List<DiseasePojo> listaDS2 = new ArrayList<DiseasePojo>();
     	listaDS2.add(Hypoxemia);
