@@ -442,6 +442,7 @@ public class Main {
     	List<DrugPojo> listaDrS6 = new ArrayList<DrugPojo>();
     	listaDrS1.add(Betablockers);
     	listaDrS1.add(NSAIDs);
+    	listaDrS1.add(Opiods);
 
     	List<DrugPojo> listaDrS7 = new ArrayList<DrugPojo>();
     	listaDrS1.add(Betablockers);
@@ -454,14 +455,17 @@ public class Main {
     	List<DrugPojo> listaDrS9 = new ArrayList<DrugPojo>();
     	listaDrS1.add(Betablockers);
     	listaDrS1.add(NSAIDs);
+    	listaDrS1.add(Opiods);
 
     	List<DrugPojo> listaDrS10 = new ArrayList<DrugPojo>();
     	listaDrS1.add(Betablockers);
     	listaDrS1.add(NSAIDs);
+    	listaDrS1.add(Opiods);
 
     	List<DrugPojo> listaDrS11 = new ArrayList<DrugPojo>();
     	listaDrS1.add(Betablockers);
     	listaDrS1.add(NSAIDs);
+    	listaDrS1.add(Opiods);
 
     	List<DrugPojo> listaDrS12 = new ArrayList<DrugPojo>();
     	listaDrS1.add(Betablockers);
