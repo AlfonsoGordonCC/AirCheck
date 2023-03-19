@@ -415,8 +415,105 @@ public class Main {
     	final DrugPojo Antihistamines = new DrugPojo(12,"antihistamines",listaS,listaP);
     	final DrugPojo SSRIs = new DrugPojo(13,"ssirs",listaS,listaP);
          
-        
-        
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	listaDrS1.add(Betablockers);
+    	listaDrS1.add(NSAIDs);
+    	listaDrS1.add(Opiods);
+    	listaDrS1.add(Statins);
+    	listaDrS1.add(Bronchodilators);
+    	listaDrS1.add(Stimulants);
+    	listaDrS1.add(Antidepressants);
+    	listaDrS1.add(ACE_inhibitors);
+    	listaDrS1.add(Antipsychotics);
+    	listaDrS1.add(Chemotherapy_drugs);
+    	listaDrS1.add(Antibiotics);
+    	listaDrS1.add(Antihistamines);
+    	listaDrS1.add(SSRIs);
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+
+    	
+
     }
 	
 	
