@@ -2,30 +2,45 @@ package db.jdbc;
 
 import java.sql.*;
 
+import db.interfaces.*;
 import db.pojos.users.User;
 
 
-public class DBManagerSQL implements db.interfaces.UserManager{
+
+public class DBManagerSQL implements UserManager{
 
 	public static Connection c;
 	
 	public void connect() {
 		try {
 			
-			Class.forName("org.sqlite.JDBC");
-			c = DriverManager.getConnection("jdbc:sqlite:./db/airCheck.db"); 
+			Class.forName("org.sqlite.JDBC"); //no se eta conectando aqui
+			c = DriverManager.getConnection("jdbc:sqlite:./db/AirCheck.db"); 
 			c.createStatement().execute("PRAGMA foreign_keys=ON");
 			
-			System.out.print("Conexion creada");
+			
+			/*
+			 * Class.forName("org.sqlite.JDBC");
+			String sqlURL= "jdbc:sqlite:RareDiseases.db"; // conexión base de datos
+			
+			 this.c=(DriverManager.getConnection(sqlURL)); //creamos la dirección de la URL de la conexión
+			 this.c.createStatement().execute("PRAGMA foreign_keys=ON");//enables foreign keys
+			 this.methods= new ResourcesSQL(this.c);*/
+			if(c!=null) {
+				System.out.print("conexion realizada con exito");
+			}else {
+				System.out.print("no se ha conectado la BD");
+			}
+			
 			this.createTables();
 			
 		} catch (SQLException sqlE) {
 			sqlE.printStackTrace();
-			System.out.print("Conexion NO creada");
+			System.out.print("Excepcion en el catch1");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.print("Conexion NO creada");
+			System.out.print("Excepcion en el catch2");
 			
 			
 		}

@@ -19,6 +19,43 @@ public class PatientPojo implements Serializable { //Serializable is used to hav
 	private List<DrugPojo> drugs; 
 	private List<SymptomsPojo> symptoms ;
 	
+	
+	
+	public PatientPojo(Integer id, String name, Gender gender, Integer age) {
+
+		this.id = id;
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+		
+	}
+	
+
+	 public PatientPojo(String name, List<DiseasePojo> disease, List<DrugPojo> drugs, List<SymptomsPojo> symptoms) {
+		super();
+		this.name = name;
+		this.disease = disease;
+		this.drugs = drugs;
+		this.symptoms = symptoms;
+	}
+
+	public PatientPojo(Integer id, String name, Gender gender, Integer age, List<DiseasePojo> disease,
+			List<DrugPojo> drugs, List<SymptomsPojo> symptoms) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+		this.disease = disease;
+		this.drugs = drugs;
+		this.symptoms = symptoms;
+	}
+
+	
+	
+	
+	
+	
     public boolean detectSym(String name) {
     	boolean compro= false;
     	for (int i=0; i< symptoms.size();i++) {
@@ -64,26 +101,8 @@ public class PatientPojo implements Serializable { //Serializable is used to hav
 	}
 	
 
-	 public PatientPojo(String name, List<DiseasePojo> disease, List<DrugPojo> drugs, List<SymptomsPojo> symptoms) {
-		super();
-		this.name = name;
-		this.disease = disease;
-		this.drugs = drugs;
-		this.symptoms = symptoms;
-	}
 
-	public PatientPojo(Integer id, String name, Gender gender, Integer age, List<DiseasePojo> disease,
-			List<DrugPojo> drugs, List<SymptomsPojo> symptoms) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.gender = gender;
-		this.age = age;
-		this.disease = disease;
-		this.drugs = drugs;
-		this.symptoms = symptoms;
-	}
-
+	
 	public List<SymptomsPojo> getSymptoms() {
 		return symptoms;
 	}

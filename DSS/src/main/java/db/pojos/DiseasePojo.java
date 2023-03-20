@@ -17,6 +17,17 @@ public class DiseasePojo implements Serializable{
 	
 
 
+	public DiseasePojo(Integer id, String name, String basicInfo, String link, Float score_max) {
+	
+		this.id = id;
+		this.name = name;
+		this.basicInfo = basicInfo;
+		this.link = link;
+		this.score = (float) 0;
+		this.score_max = score_max;
+		
+	}
+
 
 	public DiseasePojo(String name, Float score_max) {
 		super();

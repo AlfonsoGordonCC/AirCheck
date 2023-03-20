@@ -14,12 +14,22 @@ public class DrugPojo implements Serializable{
 	private List<PatientPojo> patients; 
 	
 	
+	
+	
+	public DrugPojo(Integer id, String name) {
+		super();
+		this.id= id;
+		this.name = name;
+	}
 
 	
 	public DrugPojo(String name) {
 		super();
+		
 		this.name = name;
 	}
+	
+	
 
 	public DrugPojo(Integer id, String name, List<SymptomsPojo> symptoms, List<PatientPojo> patients) {
 		super();
