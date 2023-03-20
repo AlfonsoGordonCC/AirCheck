@@ -154,6 +154,7 @@ rule "Cyanosis (b)"
     	patient.editProb("Atelectasis", 0.5);
 end
 
+/*
 rule "Cyanosis (c)"
     dialect "java"
 
@@ -188,7 +189,6 @@ rule "Headache"
 
 end
 
-/*
 
 rule "Headache"
     dialect "java"
