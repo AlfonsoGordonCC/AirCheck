@@ -2,6 +2,7 @@ package db.jdbc;
 
 import java.sql.*;
 
+
 import db.pojos.users.User;
 
 
@@ -12,11 +13,25 @@ public class DBManagerSQL implements db.interfaces.UserManager{
 	public void connect() {
 		try {
 			
+			/*
+			 * 
 			Class.forName("org.sqlite.JDBC");
-			c = DriverManager.getConnection("jdbc:sqlite:./db/airCheck.db"); 
+			String sqlURL= "jdbc:sqlite:RareDiseases.db"; // conexión base de datos
+			
+			 this.c=(DriverManager.getConnection(sqlURL)); //creamos la dirección de la URL de la conexión
+			 this.c.createStatement().execute("PRAGMA foreign_keys=ON");//enables foreign keys
+			 this.methods= new ResourcesSQL(this.c);
+			 
+			 Statement myStatement = this.c.createStatement();
+	         ResultSet rs2;
+	         */
+			
+			Class.forName("org.sqlite.JDBC");
+			c = DriverManager.getConnection("jdbc:sqlite:.AirCheck.db"); // conexión base de datos
 			c.createStatement().execute("PRAGMA foreign_keys=ON");
 			
 			this.createTables();
+			
 			
 		} catch (SQLException sqlE) {
 			sqlE.printStackTrace();
@@ -41,6 +56,8 @@ public class DBManagerSQL implements db.interfaces.UserManager{
 	}
 	
 	private void createTables() throws SQLException {
+		
+	try {
 		
 		Statement stmt1 = c.createStatement();
 		String sql1 = "CREATE TABLE Patient "
@@ -97,7 +114,7 @@ public class DBManagerSQL implements db.interfaces.UserManager{
 		String sql5 = "CREATE TABLE patient_disease "
 				   + "(patient_id	INTEGER	REFERENCES Patient(id), "
 				   + " disease_id	INTEGER	REFERENCES Disease(id), "
-				   + " PRIMARY KEY (patient_id, animal_id) )";
+				   + " PRIMARY KEY (patient_id, disease_id) )";
 		stmt5.executeUpdate(sql5);
 		stmt5.close();
 		
@@ -121,20 +138,45 @@ public class DBManagerSQL implements db.interfaces.UserManager{
 		String sql7 = "CREATE TABLE symptom_drug "
 				   + "(symptom_id	INTEGER	REFERENCES Symptoms(id), "
 				   + " drug_id	INTEGER	REFERENCES Drugs(id), "
-				   + " PRIMARY KEY (patient_id, drug_id) )";
+				   + " PRIMARY KEY (symptom_id, drug_id) )";
 		stmt7.executeUpdate(sql7);
 		stmt7.close();
-	}
+		
+		
+		
+		
+		
+		Statement stmt8 = c.createStatement();
+		String sql8 = "CREATE TABLE patient_symptom "
+				   + "(patient_id	INTEGER	REFERENCES Patient(id), "
+				   + " symptom_id	INTEGER	REFERENCES Symptoms(id), "
+				   + " PRIMARY KEY (patient_id, symptom_id) )";
+		stmt8.executeUpdate(sql8);
+		stmt8.close();
+		
+		
+		
+		
+		
+		Statement stmt9 = c.createStatement();
+		String sql9 = "CREATE TABLE symptom_disease "
+				   + "(symptom_id	INTEGER	REFERENCES Symptoms(id), "
+				   + " disease_id	INTEGER	REFERENCES Disease(id), "
+				   + " PRIMARY KEY (symptom_id, disease_id) )";
+		stmt9.executeUpdate(sql9);
+		stmt9.close();
+		
+		
+		
+	}  catch (SQLException e) {
+		if (!e.getMessage().contains("table already exists")) {
+				e.printStackTrace();
+			}
+	}//catch
+}//createTables
 
 
 
-	
-	
-	
-	
-	
-	
-	
 	
 	//OTHERS
 	@Override
