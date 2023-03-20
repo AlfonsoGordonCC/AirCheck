@@ -730,9 +730,16 @@ public class Main {
 
     }
 	
-	public static List<SymptomsPojo> createlistSD(List<SymptomsPojo> listasymp){
+	public static List<SymptomsPojo> createlistSD(DiseasePojo dis,List<SymptomsPojo> listasymp){
 		List<SymptomsPojo> listaaux = new ArrayList<SymptomsPojo>();
-		return listaaux;
+		for (int i=0;i<listasymp.size();i++) {
+			for (int j=0;j<listasymp.get(i).getDisease().size();j++) {
+				if (listasymp.get(i).getDisease().get(j)==dis) {
+					listaaux.add(listasymp.get(i));
+			}	
+		}
 	}
+		return listaaux;
+}
 	
 }
