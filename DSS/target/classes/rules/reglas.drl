@@ -154,7 +154,7 @@ rule "Cyanosis (b)"
     	patient.editProb("Atelectasis", 0.5);
 end
 
-/*
+
 rule "Cyanosis (c)"
     dialect "java"
 
@@ -164,16 +164,59 @@ rule "Cyanosis (c)"
     	patient.editProb("Hypoxemia",3);
     	patient.editProb("Tachypnea",2);
     	patient.editProb("Asthma",1);
-    	patient.editProb("Dysnea",2);
+    	patient.editProb("Dysnea",3);
     	patient.editProb("Atelectasis", 1);
-        disease.setHypoxemia(disease.getHypoxemia() + 3);
-        disease.setHyperapnea(disease.getHyperapnea() + 3);
-        disease.setTachypnea(disease.getTachypnea() + 3);
-        disease.setDysnea(disease.getDysnea() + 3);
+
+end
+
+rule "Headache (a)"
+    dialect "java"
+
+    when
+		patient: PatientPojo(detectSym("cyanosis") == true) && PatientPojo(detectSymSev("cyanosis") >= 3)
+
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 1);
+        disease.setCOVID(disease.getCOVID() + 2);
+        disease.setFlu(disease.getFlu() + 2);
+        disease.setApnea(disease.getApnea() + 2);
+        disease.setCold(disease.getCold() + 1);    
+
+end
+
+rule "Headache (b)"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Headache == true )
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 1);
+        disease.setCOVID(disease.getCOVID() + 2);
+        disease.setFlu(disease.getFlu() + 2);
+        disease.setApnea(disease.getApnea() + 2);
+        disease.setCold(disease.getCold() + 1);    
+
+end
+
+rule "Headache (c)"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Headache == true )
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 1);
+        disease.setCOVID(disease.getCOVID() + 2);
+        disease.setFlu(disease.getFlu() + 2);
+        disease.setApnea(disease.getApnea() + 2);
+        disease.setCold(disease.getCold() + 1);    
 
 end
 
 
+
+/*
 rule "Headache"
     dialect "java"
 
