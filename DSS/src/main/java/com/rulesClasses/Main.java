@@ -22,6 +22,7 @@ public class Main {
 	public static void main(String[] args) throws Exception, IOException{
 	dbMan.connect();
 	//	userMan.connect();
+	
 		
 		
 		SymptomsPojo sim1 = new SymptomsPojo("shortness_breath", 1);
