@@ -180,6 +180,22 @@ public class Main {
     	final DiseasePojo Flu = new DiseasePojo(18,"Flu","BI","Link",(float) 23,listaP,listaS);
 
     	
+    	
+    	final DrugPojo Betablockers = new DrugPojo(1,"Betablockers",listaS,listaP);
+    	final DrugPojo NSAIDs = new DrugPojo(2,"NSAIDs",listaS,listaP);
+    	final DrugPojo Opiods = new DrugPojo(3,"Opiods",listaS,listaP);
+    	final DrugPojo Statins = new DrugPojo(4,"Statins",listaS,listaP);
+    	final DrugPojo Bronchodilators = new DrugPojo(5,"Bronchodilators",listaS,listaP);
+    	final DrugPojo Stimulants = new DrugPojo(6,"Stimulants",listaS,listaP);
+    	final DrugPojo Antidepressants = new DrugPojo(7,"Antidepressants",listaS,listaP);
+    	final DrugPojo ACE_Inhibitors = new DrugPojo(8,"ACE_Inhibitors",listaS,listaP);
+    	final DrugPojo Antipsychotics = new DrugPojo(9,"Antipsychotics",listaS,listaP);
+    	final DrugPojo Chemotherapy_drugs = new DrugPojo(10,"Chemotherapy_drugs",listaS,listaP);
+    	final DrugPojo Antibiotics = new DrugPojo(11,"Antibiotics",listaS,listaP);
+    	final DrugPojo Antihistamines = new DrugPojo(12,"Antihistamines",listaS,listaP);
+    	final DrugPojo SSRIs = new DrugPojo(13,"SSRIs",listaS,listaP);
+    	
+    	
     	List<DiseasePojo> listaDS1 = new ArrayList<DiseasePojo>();
     	listaDS1.add(Hypoxemia);
     	listaDS1.add(Hyperapnea);
@@ -192,7 +208,14 @@ public class Main {
     	listaDS1.add(Malignant_Pleura_Effusion);
     	listaDS1.add(Pulmonary_Embolism);
     	
-        final SymptomsPojo Shortness_breath = new SymptomsPojo(1,"shortness_breath", 0,listaDr,listaP,listaDS1);
+    	
+    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
+    	listaDrS1.add(Betablockers);
+    	listaDrS1.add(NSAIDs);
+    	listaDrS1.add(Opiods);
+    	listaDrS1.add(Statins);
+    	
+        final SymptomsPojo Shortness_breath = new SymptomsPojo(1,"shortness_breath", 0,listaDrS1,listaP,listaDS1);
 
     	
     	List<DiseasePojo> listaDS2 = new ArrayList<DiseasePojo>();
@@ -400,26 +423,8 @@ public class Main {
     	listaDS42.add(Lung_Cancer);
 
 
-    	
-    	final DrugPojo Betablockers = new DrugPojo(1,"Betablockers",listaS,listaP);
-    	final DrugPojo NSAIDs = new DrugPojo(2,"NSAIDs",listaS,listaP);
-    	final DrugPojo Opiods = new DrugPojo(3,"Opiods",listaS,listaP);
-    	final DrugPojo Statins = new DrugPojo(4,"Statins",listaS,listaP);
-    	final DrugPojo Bronchodilators = new DrugPojo(5,"Bronchodilators",listaS,listaP);
-    	final DrugPojo Stimulants = new DrugPojo(6,"Stimulants",listaS,listaP);
-    	final DrugPojo Antidepressants = new DrugPojo(7,"Antidepressants",listaS,listaP);
-    	final DrugPojo ACE_Inhibitors = new DrugPojo(8,"ACE_Inhibitors",listaS,listaP);
-    	final DrugPojo Antipsychotics = new DrugPojo(9,"Antipsychotics",listaS,listaP);
-    	final DrugPojo Chemotherapy_drugs = new DrugPojo(10,"Chemotherapy_drugs",listaS,listaP);
-    	final DrugPojo Antibiotics = new DrugPojo(11,"Antibiotics",listaS,listaP);
-    	final DrugPojo Antihistamines = new DrugPojo(12,"Antihistamines",listaS,listaP);
-    	final DrugPojo SSRIs = new DrugPojo(13,"SSRIs",listaS,listaP);
          
-    	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
-    	listaDrS1.add(Opiods);
-    	listaDrS1.add(Statins);
+
     	
     	List<DrugPojo> listaDrS2 = new ArrayList<DrugPojo>();
     	listaDrS2.add(Bronchodilators);
@@ -706,6 +711,7 @@ public class Main {
     	listaDrS39.add(Antipsychotics);
 
     	List<DrugPojo> listaDrS40 = new ArrayList<DrugPojo>();
+    	
     	List<DrugPojo> listaDrS41 = new ArrayList<DrugPojo>();
     	listaDrS41.add(Betablockers);
     	listaDrS41.add(Statins);
@@ -724,6 +730,9 @@ public class Main {
 
     }
 	
-	
+	public static List<SymptomsPojo> createlistSD(List<SymptomsPojo> listasymp){
+		List<SymptomsPojo> listaaux = new ArrayList<SymptomsPojo>();
+		return listaaux;
+	}
 	
 }
