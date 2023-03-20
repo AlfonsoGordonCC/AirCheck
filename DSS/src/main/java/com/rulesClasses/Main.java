@@ -19,7 +19,7 @@ public class Main {
 	//private static UserManager userMan = (UserManager) new User(); //Alfonso? Revisa esto porfi
 	
 	
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws Exception, IOException{
 	//	dbMan.connect();
 	//	userMan.connect();
 		

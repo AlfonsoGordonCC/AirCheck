@@ -16,13 +16,17 @@ public class DBManagerSQL implements db.interfaces.UserManager{
 			c = DriverManager.getConnection("jdbc:sqlite:./db/airCheck.db"); 
 			c.createStatement().execute("PRAGMA foreign_keys=ON");
 			
+			//System.out.print("Conexion creada");
 			this.createTables();
 			
 		} catch (SQLException sqlE) {
 			sqlE.printStackTrace();
+			System.out.print("Conexion NO creada");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.print("Conexion NO creada");
+			
 			
 		}
 	}
@@ -199,10 +203,7 @@ public class DBManagerSQL implements db.interfaces.UserManager{
 		return false;
 	}
 	
-	
-	
-	
-	
+
 	
 	
 
