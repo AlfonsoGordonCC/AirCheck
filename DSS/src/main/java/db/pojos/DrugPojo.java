@@ -10,7 +10,7 @@ public class DrugPojo implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name; 
-	private List<SymptomsPojo> symptoms ; //as there's its brother List on Worker class, this conforms a many-to-many relationship 
+	private List<SymptomsPojo> symptoms; //as there's its brother List on Worker class, this conforms a many-to-many relationship 
 	private List<PatientPojo> patients; 
 	
 	

@@ -15,10 +15,6 @@ public class SymptomsPojo implements Serializable{
 	private List<DiseasePojo> disease ;
 	
 	
-
-
-	
-	
 	public SymptomsPojo(String name, Integer sever) {
 		super();
 		this.name = name;

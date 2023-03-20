@@ -2,7 +2,6 @@ package db.pojos;
 
 import java.io.Serializable;
 import java.util.List;
-import db.pojos.*;
 
 public class DiseasePojo implements Serializable{
 	
@@ -19,24 +18,29 @@ public class DiseasePojo implements Serializable{
 
 
 
-
-	public DiseasePojo(String name, Float score, Float score_max) {
+	public DiseasePojo(String name, Float score_max) {
 		super();
 		this.name = name;
-		this.score = score;
+		this.score = (float) 0;
 		this.score_max = score_max;
 	}
 
 
 
-	public DiseasePojo(Integer id, String name, String basicInfo, String link, Float score, Float score_max,
+	public DiseasePojo() {
+		super();
+	}
+
+
+
+	public DiseasePojo(Integer id, String name, String basicInfo, String link, Float score_max,
 			List<PatientPojo> patient, List<SymptomsPojo> symptoms) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.basicInfo = basicInfo;
 		this.link = link;
-		this.score = score;
+		this.score = (float) 0;
 		this.score_max = score_max;
 		this.patient = patient;
 		this.symptoms = symptoms;
@@ -54,7 +58,9 @@ public class DiseasePojo implements Serializable{
 		this.score_max = score_max;
 	}
 
-
+	public Float getScore() {
+		return score;
+	}
 
 	public void setScore(Float score) {
 		this.score = score;
