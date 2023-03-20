@@ -74,7 +74,7 @@ rule "Rapid breathing (a)"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("rapid_breathing") == true) && (PatientPojo(detectSymSev("rapid_breathing") <= 2) || (PatientPojo(detectDrug("Bronchodilators") == true) || PatientPojo(detectDrug("Stimulants") == true))
+    	patient: PatientPojo(detectSym("rapid_breathing") == true) && (PatientPojo(detectSymSev("rapid_breathing") <= 2) || (PatientPojo(detectDrug("Bronchodilators") == true) || PatientPojo(detectDrug("Stimulants") == true)))
     then
         patient.editProb("Hypoxemia",1.4);
     	patient.editProb("Tachypnea",1.4);
@@ -91,7 +91,7 @@ rule "Rapid breathing (b)"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("rapid_breathing") == true) && PatientPojo(detectSymSev("rapid_breathing") >= 3) && (PatientPojo(detectDrug("Bronchodilators") == true) || PatientPojo(detectDrug("Stimulants") == true)))
+    	patient: PatientPojo(detectSym("rapid_breathing") == true) && PatientPojo(detectSymSev("rapid_breathing") >= 3) && (PatientPojo(detectDrug("Bronchodilators") == true) || PatientPojo(detectDrug("Stimulants") == true))
     then
         patient.editProb("Hypoxemia",1.8);
     	patient.editProb("Tachypnea",1.8);
@@ -123,7 +123,7 @@ rule "Wheezing (a)"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("wheezing") == true) &&  PatientPojo(detectSymSev("wheezing") <= 2)) && (PatientPojo(detectDrug("Betablockers") == true) || PatientPojo(detectDrug("Nsaids") == true))) 
+    	patient: PatientPojo(detectSym("wheezing") == true) &&  PatientPojo(detectSymSev("wheezing") <= 2) && (PatientPojo(detectDrug("Betablockers") == true) || PatientPojo(detectDrug("Nsaids") == true)) 
     then
         patient.editProb("Hypoxemia",0.5);
     	patient.editProb("Tachypnea",0.5);
@@ -141,7 +141,7 @@ rule "Wheezing (b)"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("wheezing") == true) && PatientPojo(detectSymSev("wheezing") >= 3)  && (PatientPojo(detectDrug("Betablockers") == true) || PatientPojo(detectDrug("Nsaids") == true)))
+    	patient: PatientPojo(detectSym("wheezing") == true) && PatientPojo(detectSymSev("wheezing") >= 3)  && (PatientPojo(detectDrug("Betablockers") == true) || PatientPojo(detectDrug("Nsaids") == true))
     then
         patient.editProb("Hypoxemia",1);
     	patient.editProb("Tachypnea",1);
@@ -159,7 +159,7 @@ rule "Wheezing (c)"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("wheezing") == true) && PatientPojo(detectSymSev("wheezing") >= 3)  && (PatientPojo(detectDrug("Betablockers") == false) || PatientPojo(detectDrug("Nsaids") == false) || PatientPojo(detectDrug("Statins") == true)|| PatientPojo(detectDrug("Ace_Inhibitor") == true)))
+    	patient: PatientPojo(detectSym("wheezing") == true) && PatientPojo(detectSymSev("wheezing") >= 3)  && (PatientPojo(detectDrug("Betablockers") == false) || PatientPojo(detectDrug("Nsaids") == false) || PatientPojo(detectDrug("Statins") == true)|| PatientPojo(detectDrug("Ace_Inhibitor") == true))
     then
         patient.editProb("Hypoxemia",1.8);
     	patient.editProb("Tachypnea",1.8);
