@@ -50,12 +50,12 @@ public class PatientPojo implements Serializable { //Serializable is used to hav
     	return a;
     }
     
-	public void editProb(String name, double points) {
-		float point = (float) points;
+	public void editProb(String name, float points) {
+
 		for (int i = 0; i < disease.size(); i++) {
 			if (disease.get(i).getName().equals(name)) {
 
-				disease.get(i).setScore(disease.get(i).getScore() + point);
+				disease.get(i).setScore(disease.get(i).getScore() + points);
 				break;
 			}
 
