@@ -91,7 +91,7 @@ rule "Wheezing (a)"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("wheezing") == true) &&  PatientPojo(detectSymSev("wheezing") <= 2)) && (PatientPojo(detectDrug("Betablockers") == true) || PatientPojo(detectDrug("Nsaids") == true)) 
+    	patient: PatientPojo(detectSym("wheezing") == true) &&  PatientPojo(detectSymSev("wheezing") <= 2) && (PatientPojo(detectDrug("Betablockers") == true) || PatientPojo(detectDrug("Nsaids") == true)) 
     then
         patient.editProb("Hypoxemia",0.5);
     	patient.editProb("Tachypnea",0.5);
