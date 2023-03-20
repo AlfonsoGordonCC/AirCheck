@@ -16,7 +16,7 @@ public class DBManagerSQL implements db.interfaces.UserManager{
 			c = DriverManager.getConnection("jdbc:sqlite:./db/airCheck.db"); 
 			c.createStatement().execute("PRAGMA foreign_keys=ON");
 			
-			//System.out.print("Conexion creada");
+			System.out.print("Conexion creada");
 			this.createTables();
 			
 		} catch (SQLException sqlE) {
