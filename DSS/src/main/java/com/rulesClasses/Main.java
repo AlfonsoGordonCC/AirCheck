@@ -20,8 +20,9 @@ public class Main {
 	
 	
 	public static void main(String[] args) throws Exception, IOException{
-		dbMan.connect();
+	dbMan.connect();
 	//	userMan.connect();
+		
 		
 		SymptomsPojo sim1 = new SymptomsPojo("shortness_breath", 1);
 		SymptomsPojo sim2 = new SymptomsPojo("rapid_Breathing", 2);

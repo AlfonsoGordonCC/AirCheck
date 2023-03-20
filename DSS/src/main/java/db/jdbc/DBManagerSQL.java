@@ -2,10 +2,11 @@ package db.jdbc;
 
 import java.sql.*;
 
+import db.interfaces.UserManager;
 import db.pojos.users.User;
 
 
-public class DBManagerSQL implements db.interfaces.UserManager{
+public class DBManagerSQL implements UserManager{
 
 	public static Connection c;
 	
