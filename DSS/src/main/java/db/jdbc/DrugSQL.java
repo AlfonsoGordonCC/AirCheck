@@ -31,7 +31,7 @@ public class DrugSQL {
 	
 	
 	
-	public List<DiseasePojo> listDiseases(){
+	public List<DrugPojo> listDiseases(){
 		
 		List<DrugPojo> theDrugs = new ArrayList<DrugPojo>();
 		
@@ -45,9 +45,9 @@ public class DrugSQL {
 				int id = rs.getInt("id");	
 				String name = rs.getString("name");
 		
-				DrugPojo unDrug = new DrugPojo(name, id);
+				DrugPojo unDrug = new DrugPojo(id, name);
 				
-				((Object) theDrugs).addSymptom(unDrug); 
+				theDrugs.addSymptom(unDrug);  //no entiendo
 					
 				}
 		
