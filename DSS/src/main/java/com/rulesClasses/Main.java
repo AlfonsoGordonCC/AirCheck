@@ -160,24 +160,24 @@ public class Main {
     	final SymptomsPojo Chronic_cough = new SymptomsPojo(42,"chronic_cough", 0,listaDr,listaP,listaD);
 
     	
-    	final DiseasePojo Hypoxemia = new DiseasePojo(1,"hypoxemia","BI","Link",(float) 23,listaP,listaS);
-    	final DiseasePojo Apnea = new DiseasePojo(2,"apnea","BI","Link",(float) 21,listaP,listaS);
-    	final DiseasePojo Hyperapnea = new DiseasePojo(3,"hyperapnea","BI","Link",(float) 16,listaP,listaS);
-    	final DiseasePojo Tachypnea = new DiseasePojo(4,"tachypnea","BI","Link",(float) 15,listaP,listaS);
-    	final DiseasePojo Dysnea = new DiseasePojo(5,"dysnea","BI","Link",(float) 19,listaP,listaS);
-    	final DiseasePojo Respiratory_Insufficiency = new DiseasePojo(6,"respiratory_insufficiency","BI","Link",(float) 22,listaP,listaS);
-    	final DiseasePojo Lung_cancer = new DiseasePojo(7,"lung_cancer","BI","Link",(float) 29,listaP,listaS);
-    	final DiseasePojo COVID = new DiseasePojo(8,"covid","BI","Link",(float) 21,listaP,listaS);
-    	final DiseasePojo Asthma = new DiseasePojo(9,"asthma","BI","Link",(float) 10,listaP,listaS);
-    	final DiseasePojo Emphysema = new DiseasePojo(10,"emphysema","BI","Link",(float) 3,listaP,listaS);
-    	final DiseasePojo Bronchitis_Chronic = new DiseasePojo(11,"bronchitis_chronic","BI","Link",(float) 11,listaP,listaS);
-    	final DiseasePojo Atelactasis = new DiseasePojo(12,"atelactasis","BI","Link",(float) 7,listaP,listaS);
-    	final DiseasePojo Pneumothorax = new DiseasePojo(13,"pneumothorax","BI","Link",(float) 7,listaP,listaS);
-    	final DiseasePojo Pneumonia = new DiseasePojo(14,"pneumonia","BI","Link",(float) 24,listaP,listaS);
-    	final DiseasePojo Malignant_Pleura_Effusion = new DiseasePojo(15,"malignant_pleura_effusion","BI","Link",(float) 5,listaP,listaS);
-    	final DiseasePojo Pulmonary_Embolism = new DiseasePojo(16,"pulmonary_embolism","BI","Link",(float) 6,listaP,listaS);
-    	final DiseasePojo Cold = new DiseasePojo(17,"cold","BI","Link",(float) 16,listaP,listaS);
-    	final DiseasePojo Flu = new DiseasePojo(18,"flu","BI","Link",(float) 23,listaP,listaS);
+    	final DiseasePojo Hypoxemia = new DiseasePojo(1,"Hypoxemia","BI","Link",(float) 23,listaP,listaS);
+    	final DiseasePojo Apnea = new DiseasePojo(2,"Apnea","BI","Link",(float) 21,listaP,listaS);
+    	final DiseasePojo Hyperapnea = new DiseasePojo(3,"Hyperapnea","BI","Link",(float) 16,listaP,listaS);
+    	final DiseasePojo Tachypnea = new DiseasePojo(4,"Tachypnea","BI","Link",(float) 15,listaP,listaS);
+    	final DiseasePojo Dysnea = new DiseasePojo(5,"Dysnea","BI","Link",(float) 19,listaP,listaS);
+    	final DiseasePojo Respiratory_Insufficiency = new DiseasePojo(6,"Respiratory_Insufficiency","BI","Link",(float) 22,listaP,listaS);
+    	final DiseasePojo Lung_Cancer = new DiseasePojo(7,"Lung_Cancer","BI","Link",(float) 29,listaP,listaS);
+    	final DiseasePojo COVID = new DiseasePojo(8,"COVID","BI","Link",(float) 21,listaP,listaS);
+    	final DiseasePojo Asthma = new DiseasePojo(9,"Asthma","BI","Link",(float) 10,listaP,listaS);
+    	final DiseasePojo Emphysema = new DiseasePojo(10,"Emphysema","BI","Link",(float) 3,listaP,listaS);
+    	final DiseasePojo Bronchitis_Chronic = new DiseasePojo(11,"Bronchitis_Chronic","BI","Link",(float) 11,listaP,listaS);
+    	final DiseasePojo Atelactasis = new DiseasePojo(12,"Atelactasis","BI","Link",(float) 7,listaP,listaS);
+    	final DiseasePojo Pneumothorax = new DiseasePojo(13,"Pneumothorax","BI","Link",(float) 7,listaP,listaS);
+    	final DiseasePojo Pneumonia = new DiseasePojo(14,"Pneumonia","BI","Link",(float) 24,listaP,listaS);
+    	final DiseasePojo Malignant_Pleura_Effusion = new DiseasePojo(15,"Malignant_Pleura_Effusion","BI","Link",(float) 5,listaP,listaS);
+    	final DiseasePojo Pulmonary_Embolism = new DiseasePojo(16,"Pulmonary_Embolism","BI","Link",(float) 6,listaP,listaS);
+    	final DiseasePojo Cold = new DiseasePojo(17,"Cold","BI","Link",(float) 16,listaP,listaS);
+    	final DiseasePojo Flu = new DiseasePojo(18,"Flu","BI","Link",(float) 23,listaP,listaS);
 
     	
     	List<DiseasePojo> listaDS1 = new ArrayList<DiseasePojo>();
@@ -186,7 +186,7 @@ public class Main {
     	listaDS1.add(Tachypnea);
     	listaDS1.add(Dysnea);
     	listaDS1.add(Respiratory_Insufficiency);
-    	listaDS1.add(Lung_cancer);
+    	listaDS1.add(Lung_Cancer);
     	listaDS1.add(Pneumothorax);
     	listaDS1.add(Pneumonia);
     	listaDS1.add(Malignant_Pleura_Effusion);
@@ -206,7 +206,7 @@ public class Main {
     	listaDS3.add(Tachypnea);
     	listaDS3.add(Dysnea);
     	listaDS3.add(Respiratory_Insufficiency);
-    	listaDS3.add(Lung_cancer);
+    	listaDS3.add(Lung_Cancer);
 
     	List<DiseasePojo> listaDS4 = new ArrayList<DiseasePojo>();  
     	listaDS4.add(Hypoxemia);
@@ -237,7 +237,7 @@ public class Main {
     	List<DiseasePojo> listaDS8 = new ArrayList<DiseasePojo>();	
     	listaDS8.add(Hypoxemia);
     	listaDS8.add(Respiratory_Insufficiency);
-    	listaDS8.add(Lung_cancer);
+    	listaDS8.add(Lung_Cancer);
     	listaDS8.add(Pneumothorax);
     	listaDS8.add(Pneumonia);
     	listaDS8.add(Pulmonary_Embolism);
@@ -249,7 +249,7 @@ public class Main {
     	listaDS9.add(Tachypnea);
     	listaDS9.add(Dysnea);
     	listaDS9.add(Respiratory_Insufficiency);
-    	listaDS9.add(Lung_cancer);
+    	listaDS9.add(Lung_Cancer);
     	listaDS9.add(COVID);
     	listaDS9.add(Pneumonia);
     	listaDS9.add(Flu);
@@ -297,7 +297,7 @@ public class Main {
     	listaDS20.add(Tachypnea);
     	listaDS20.add(Dysnea);
     	listaDS20.add(Respiratory_Insufficiency);
-    	listaDS20.add(Lung_cancer);
+    	listaDS20.add(Lung_Cancer);
     	listaDS20.add(Asthma);
 
     	List<DiseasePojo> listaDS21 = new ArrayList<DiseasePojo>();
@@ -318,28 +318,28 @@ public class Main {
     	listaDS22.add(Flu);
 
     	List<DiseasePojo> listaDS23 = new ArrayList<DiseasePojo>();
-    	listaDS23.add(Lung_cancer);
+    	listaDS23.add(Lung_Cancer);
     	listaDS23.add(Pulmonary_Embolism);
     	listaDS23.add(Cold);
     	listaDS23.add(Flu);
 
     	List<DiseasePojo> listaDS24 = new ArrayList<DiseasePojo>();
-    	listaDS24.add(Lung_cancer);
+    	listaDS24.add(Lung_Cancer);
 
     	List<DiseasePojo> listaDS25 = new ArrayList<DiseasePojo>();
     	listaDS25.add(Respiratory_Insufficiency);
 
     	List<DiseasePojo> listaDS26 = new ArrayList<DiseasePojo>(); 
     	listaDS26.add(Respiratory_Insufficiency);
-    	listaDS26.add(Lung_cancer);
+    	listaDS26.add(Lung_Cancer);
     	listaDS26.add(Emphysema);
     	listaDS26.add(Pneumonia);
 
     	List<DiseasePojo> listaDS27 = new ArrayList<DiseasePojo>();
-    	listaDS27.add(Lung_cancer);
+    	listaDS27.add(Lung_Cancer);
 
     	List<DiseasePojo> listaDS28 = new ArrayList<DiseasePojo>();
-    	listaDS28.add(Lung_cancer);
+    	listaDS28.add(Lung_Cancer);
 
     	List<DiseasePojo> listaDS29 = new ArrayList<DiseasePojo>();
     	listaDS29.add(COVID);
@@ -370,7 +370,7 @@ public class Main {
     	listaDS34.add(Pneumonia);
 
     	List<DiseasePojo> listaDS35 = new ArrayList<DiseasePojo>();
-    	listaDS35.add(Lung_cancer);
+    	listaDS35.add(Lung_Cancer);
     	listaDS35.add(Bronchitis_Chronic);
     	listaDS35.add(Pneumonia);
     	listaDS35.add(Cold);
@@ -397,177 +397,327 @@ public class Main {
 
     	List<DiseasePojo> listaDS42 = new ArrayList<DiseasePojo>();
     	listaDS42.add(Respiratory_Insufficiency);
-    	listaDS42.add(Lung_cancer);
+    	listaDS42.add(Lung_Cancer);
 
 
     	
-    	final DrugPojo Betablockers = new DrugPojo(1,"betablockers",listaS,listaP);
-    	final DrugPojo NSAIDs = new DrugPojo(2,"nsaids",listaS,listaP);
-    	final DrugPojo Opiods = new DrugPojo(3,"opiods",listaS,listaP);
-    	final DrugPojo Statins = new DrugPojo(4,"statins",listaS,listaP);
-    	final DrugPojo Bronchodilators = new DrugPojo(5,"bronchodilators",listaS,listaP);
-    	final DrugPojo Stimulants = new DrugPojo(6,"stimulants",listaS,listaP);
-    	final DrugPojo Antidepressants = new DrugPojo(7,"antidepressants",listaS,listaP);
-    	final DrugPojo ACE_inhibitors = new DrugPojo(8,"ace_inhibitors",listaS,listaP);
-    	final DrugPojo Antipsychotics = new DrugPojo(9,"antipsychotics",listaS,listaP);
-    	final DrugPojo Chemotherapy_drugs = new DrugPojo(10,"chemotherapy_drugs",listaS,listaP);
-    	final DrugPojo Antibiotics = new DrugPojo(11,"antibiotics",listaS,listaP);
-    	final DrugPojo Antihistamines = new DrugPojo(12,"antihistamines",listaS,listaP);
-    	final DrugPojo SSRIs = new DrugPojo(13,"ssirs",listaS,listaP);
+    	final DrugPojo Betablockers = new DrugPojo(1,"Betablockers",listaS,listaP);
+    	final DrugPojo NSAIDs = new DrugPojo(2,"NSAIDs",listaS,listaP);
+    	final DrugPojo Opiods = new DrugPojo(3,"Opiods",listaS,listaP);
+    	final DrugPojo Statins = new DrugPojo(4,"Statins",listaS,listaP);
+    	final DrugPojo Bronchodilators = new DrugPojo(5,"Bronchodilators",listaS,listaP);
+    	final DrugPojo Stimulants = new DrugPojo(6,"Stimulants",listaS,listaP);
+    	final DrugPojo Antidepressants = new DrugPojo(7,"Antidepressants",listaS,listaP);
+    	final DrugPojo ACE_Inhibitors = new DrugPojo(8,"ACE_Inhibitors",listaS,listaP);
+    	final DrugPojo Antipsychotics = new DrugPojo(9,"Antipsychotics",listaS,listaP);
+    	final DrugPojo Chemotherapy_drugs = new DrugPojo(10,"Chemotherapy_drugs",listaS,listaP);
+    	final DrugPojo Antibiotics = new DrugPojo(11,"Antibiotics",listaS,listaP);
+    	final DrugPojo Antihistamines = new DrugPojo(12,"Antihistamines",listaS,listaP);
+    	final DrugPojo SSRIs = new DrugPojo(13,"SSRIs",listaS,listaP);
          
     	List<DrugPojo> listaDrS1 = new ArrayList<DrugPojo>();
     	listaDrS1.add(Betablockers);
     	listaDrS1.add(NSAIDs);
     	listaDrS1.add(Opiods);
     	listaDrS1.add(Statins);
-    	listaDrS1.add(Bronchodilators);
-    	listaDrS1.add(Stimulants);
-    	listaDrS1.add(Antidepressants);
-    	listaDrS1.add(ACE_inhibitors);
-    	listaDrS1.add(Antipsychotics);
-    	listaDrS1.add(Chemotherapy_drugs);
-    	listaDrS1.add(Antibiotics);
-    	listaDrS1.add(Antihistamines);
-    	listaDrS1.add(SSRIs);
     	
     	List<DrugPojo> listaDrS2 = new ArrayList<DrugPojo>();
+    	listaDrS2.add(Bronchodilators);
+    	listaDrS2.add(Stimulants);
+    	listaDrS2.add(Antidepressants);
+
     	List<DrugPojo> listaDrS3 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS3.add(Betablockers);
+    	listaDrS3.add(NSAIDs);
+    	listaDrS3.add(Statins);
+    	listaDrS3.add(ACE_Inhibitors);
 
     	List<DrugPojo> listaDrS4 = new ArrayList<DrugPojo>();
+    	listaDrS4.add(Antidepressants);
+    	listaDrS4.add(Antipsychotics);
+
     	List<DrugPojo> listaDrS5 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
+    	listaDrS5.add(Betablockers);
 
     	List<DrugPojo> listaDrS6 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS6.add(Betablockers);
+    	listaDrS6.add(NSAIDs);
+    	listaDrS6.add(Opiods);
+    	listaDrS6.add(Statins);
+    	listaDrS6.add(Antidepressants);
+    	listaDrS6.add(ACE_Inhibitors);
+    	listaDrS6.add(Antipsychotics);
 
     	List<DrugPojo> listaDrS7 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS7.add(Betablockers);
+    	listaDrS7.add(NSAIDs);
+    	listaDrS7.add(Statins);
+    	listaDrS7.add(Antidepressants);
+    	listaDrS7.add(Antipsychotics);
+    	listaDrS7.add(Antibiotics);
+    	listaDrS7.add(SSRIs);
 
     	List<DrugPojo> listaDrS8 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS8.add(Betablockers);
+    	listaDrS8.add(NSAIDs);
+    	listaDrS8.add(Statins);
+    	listaDrS8.add(Bronchodilators);
+    	listaDrS8.add(Stimulants);
+    	listaDrS8.add(Antidepressants);
+    	listaDrS8.add(Antipsychotics);
+    	listaDrS8.add(Antibiotics);
 
     	List<DrugPojo> listaDrS9 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS9.add(Betablockers);
+    	listaDrS9.add(NSAIDs);
+    	listaDrS9.add(Opiods);
+    	listaDrS9.add(Statins);
+    	listaDrS9.add(Antidepressants);
+    	listaDrS9.add(Antipsychotics);
+    	listaDrS9.add(Chemotherapy_drugs);
+    	listaDrS9.add(Antibiotics);
+    	listaDrS9.add(SSRIs);
 
     	List<DrugPojo> listaDrS10 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS10.add(Betablockers);
+    	listaDrS10.add(NSAIDs);
+    	listaDrS10.add(Opiods);
+    	listaDrS10.add(Statins);
+    	listaDrS10.add(Antidepressants);
+    	listaDrS10.add(Antipsychotics);
+    	listaDrS10.add(Antibiotics);
 
     	List<DrugPojo> listaDrS11 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS11.add(Betablockers);
+    	listaDrS11.add(NSAIDs);
+    	listaDrS11.add(Opiods);
+    	listaDrS11.add(Statins);
+    	listaDrS11.add(Antidepressants);
+    	listaDrS11.add(ACE_Inhibitors);
+    	listaDrS11.add(Antipsychotics);
+    	listaDrS11.add(Antibiotics);
 
     	List<DrugPojo> listaDrS12 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS12.add(Betablockers);
+    	listaDrS12.add(NSAIDs);
+    	listaDrS12.add(Antidepressants);
+    	listaDrS12.add(Antipsychotics);
+    	listaDrS12.add(Antihistamines);
+    	listaDrS12.add(SSRIs);
 
     	List<DrugPojo> listaDrS13 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS13.add(Betablockers);
+    	listaDrS13.add(NSAIDs);
+    	listaDrS13.add(Statins);
+    	listaDrS13.add(Stimulants);
+    	listaDrS13.add(Antipsychotics);
+    	listaDrS13.add(SSRIs);
 
     	List<DrugPojo> listaDrS14 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS14.add(Betablockers);
+    	listaDrS14.add(NSAIDs);
+    	listaDrS14.add(Stimulants);
+    	listaDrS14.add(Antipsychotics);
+    	listaDrS14.add(Antihistamines);
+    	listaDrS14.add(SSRIs);
 
     	List<DrugPojo> listaDrS15 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS15.add(Betablockers);
+    	listaDrS15.add(NSAIDs);
+    	listaDrS15.add(Statins);
+    	listaDrS15.add(Antipsychotics);
+    	listaDrS15.add(SSRIs);
 
     	List<DrugPojo> listaDrS16 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS16.add(Betablockers);
+    	listaDrS16.add(NSAIDs);
+    	listaDrS16.add(Stimulants);
+    	listaDrS16.add(Antipsychotics);
+    	listaDrS16.add(Antihistamines);
+    	listaDrS16.add(SSRIs);
 
     	List<DrugPojo> listaDrS17 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS17.add(Betablockers);
+    	listaDrS17.add(NSAIDs);
+    	listaDrS17.add(Stimulants);
+    	listaDrS17.add(Antihistamines);
+    	listaDrS17.add(SSRIs);
 
     	List<DrugPojo> listaDrS18 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS18.add(Betablockers);
+    	listaDrS18.add(NSAIDs);
+    	listaDrS18.add(Stimulants);
+    	listaDrS18.add(Antihistamines);
+    	listaDrS18.add(SSRIs);
 
     	List<DrugPojo> listaDrS19 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS19.add(Betablockers);
+    	listaDrS19.add(NSAIDs);
+    	listaDrS19.add(Antidepressants);
+    	listaDrS19.add(Antipsychotics);
+    	listaDrS19.add(Antihistamines);
+    	listaDrS19.add(SSRIs);
 
     	List<DrugPojo> listaDrS20 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS20.add(Betablockers);
+    	listaDrS20.add(NSAIDs);
+    	listaDrS20.add(Opiods);
+    	listaDrS20.add(Statins);
+    	listaDrS20.add(Bronchodilators);
+    	listaDrS20.add(Antidepressants);
+    	listaDrS20.add(ACE_Inhibitors);
+    	listaDrS20.add(SSRIs);
 
     	List<DrugPojo> listaDrS21 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS21.add(Betablockers);
+    	listaDrS21.add(NSAIDs);
+    	listaDrS21.add(Statins);
+    	listaDrS21.add(Antidepressants);
+    	listaDrS21.add(ACE_Inhibitors);
+    	listaDrS21.add(Antipsychotics);
+    	listaDrS21.add(Antibiotics);
+    	listaDrS21.add(SSRIs);
 
     	List<DrugPojo> listaDrS22 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS22.add(Betablockers);
+    	listaDrS22.add(NSAIDs);
+    	listaDrS22.add(Opiods);
+    	listaDrS22.add(ACE_Inhibitors);
 
     	List<DrugPojo> listaDrS23 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(NSAIDs);
+    	listaDrS23.add(NSAIDs);
+    	listaDrS23.add(Chemotherapy_drugs);
 
     	List<DrugPojo> listaDrS24 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS24.add(Betablockers);
+    	listaDrS24.add(NSAIDs);
+    	listaDrS24.add(Statins);
+    	listaDrS24.add(ACE_Inhibitors);
 
     	List<DrugPojo> listaDrS25 = new ArrayList<DrugPojo>();
     	List<DrugPojo> listaDrS26 = new ArrayList<DrugPojo>();
+    	listaDrS26.add(Stimulants);
+    	listaDrS26.add(Antidepressants);
+    	listaDrS26.add(Antipsychotics);
+    	listaDrS26.add(Chemotherapy_drugs);
+    	listaDrS26.add(Antibiotics);
+
     	List<DrugPojo> listaDrS27 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS27.add(Betablockers);
+    	listaDrS27.add(NSAIDs);
+    	listaDrS27.add(Opiods);
+    	listaDrS27.add(Antidepressants);
+    	listaDrS27.add(ACE_Inhibitors);
+    	listaDrS27.add(Antipsychotics);
+    	listaDrS27.add(Antibiotics);
 
     	List<DrugPojo> listaDrS28 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS28.add(Betablockers);
+    	listaDrS28.add(NSAIDs);
+    	listaDrS28.add(Opiods);
+    	listaDrS28.add(Antipsychotics);
 
     	List<DrugPojo> listaDrS29 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS29.add(Betablockers);
+    	listaDrS29.add(NSAIDs);
+    	listaDrS29.add(Antidepressants);
+    	listaDrS29.add(ACE_Inhibitors);
+    	listaDrS29.add(Antipsychotics);
+    	listaDrS29.add(Chemotherapy_drugs);
+    	listaDrS29.add(Antibiotics);
+    	listaDrS29.add(Antihistamines);
 
     	List<DrugPojo> listaDrS30 = new ArrayList<DrugPojo>();
+    	listaDrS30.add(Antidepressants);
+    	listaDrS30.add(ACE_Inhibitors);
+    	listaDrS30.add(Antipsychotics);
+    	listaDrS30.add(Chemotherapy_drugs);
+    	listaDrS30.add(Antibiotics);
+    	listaDrS30.add(Antihistamines);
+
     	List<DrugPojo> listaDrS31 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS31.add(Betablockers);
+    	listaDrS31.add(NSAIDs);
+    	listaDrS31.add(Opiods);
+    	listaDrS31.add(Statins);
+    	listaDrS31.add(Antidepressants);
+    	listaDrS31.add(ACE_Inhibitors);
+    	listaDrS31.add(Antipsychotics);
+    	listaDrS31.add(Antibiotics);
+    	listaDrS31.add(Antihistamines);
 
     	List<DrugPojo> listaDrS32 = new ArrayList<DrugPojo>(); 
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS32.add(Betablockers);
+    	listaDrS32.add(NSAIDs);
+    	listaDrS32.add(Opiods);
+    	listaDrS32.add(Statins);
+    	listaDrS32.add(Antidepressants);
+    	listaDrS32.add(Chemotherapy_drugs);
+    	listaDrS32.add(Antibiotics);
 
     	List<DrugPojo> listaDrS33 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS33.add(Betablockers);
+    	listaDrS33.add(NSAIDs);
+    	listaDrS33.add(Statins);
+    	listaDrS33.add(Antidepressants);
+    	listaDrS33.add(ACE_Inhibitors);
+    	listaDrS33.add(Chemotherapy_drugs);
 
     	List<DrugPojo> listaDrS34 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS34.add(Betablockers);
+    	listaDrS34.add(NSAIDs);
+    	listaDrS34.add(Opiods);
+    	listaDrS34.add(Antidepressants);
+    	listaDrS34.add(Antipsychotics);
+    	listaDrS34.add(Antihistamines);
 
     	List<DrugPojo> listaDrS35 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
+    	listaDrS35.add(Betablockers);
+    	listaDrS35.add(Statins);
+    	listaDrS35.add(Bronchodilators);
+    	listaDrS35.add(Antidepressants);
+    	listaDrS35.add(ACE_Inhibitors);
 
     	List<DrugPojo> listaDrS36 = new ArrayList<DrugPojo>(); 
-    	listaDrS1.add(Betablockers);
+    	listaDrS36.add(Betablockers);
+    	listaDrS36.add(Statins);
+    	listaDrS36.add(Bronchodilators);
+    	listaDrS36.add(Antidepressants);
+    	listaDrS36.add(ACE_Inhibitors);
+    	listaDrS36.add(Antibiotics);
 
     	List<DrugPojo> listaDrS37 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS37.add(Betablockers);
+    	listaDrS37.add(NSAIDs);
+    	listaDrS37.add(Opiods);
+    	listaDrS37.add(Antidepressants);
+    	listaDrS37.add(ACE_Inhibitors);
 
     	List<DrugPojo> listaDrS38 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(NSAIDs);
+    	listaDrS38.add(NSAIDs);
+    	listaDrS38.add(Stimulants);
+    	listaDrS38.add(Antidepressants);
 
     	List<DrugPojo> listaDrS39 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(NSAIDs);
+    	listaDrS39.add(NSAIDs);
+    	listaDrS39.add(Statins);
+    	listaDrS39.add(Stimulants);
+    	listaDrS39.add(Antidepressants);
+    	listaDrS39.add(Antipsychotics);
 
     	List<DrugPojo> listaDrS40 = new ArrayList<DrugPojo>();
     	List<DrugPojo> listaDrS41 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
+    	listaDrS41.add(Betablockers);
+    	listaDrS41.add(Statins);
+    	listaDrS41.add(Antidepressants);
+    	listaDrS41.add(ACE_Inhibitors);
 
     	List<DrugPojo> listaDrS42 = new ArrayList<DrugPojo>();
-    	listaDrS1.add(Betablockers);
-    	listaDrS1.add(NSAIDs);
+    	listaDrS42.add(Betablockers);
+    	listaDrS42.add(NSAIDs);
+    	listaDrS42.add(Statins);
+    	listaDrS42.add(Antidepressants);
+    	listaDrS42.add(ACE_Inhibitors);
 
 
     	
