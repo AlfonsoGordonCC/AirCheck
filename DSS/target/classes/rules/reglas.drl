@@ -11,11 +11,11 @@ import db.pojos.*;
 
 
 
-rule "Shortness of breath (a)"
+rule "Shortness of breath"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("shortness_breath") == true) && (PatientPojo(detectSymSev("shortness_breath") <= 2) || PatientPojo(detectDrug("Betablockers") == true))
+    	patient: PatientPojo(detectSym("shortness_breath") == true) && PatientPojo(detectSymSev("shortness_breath") > 2) && PatientPojo(detectDrug("Betablockers") == true)
     then
     
     	patient.editProb("Hypoxemia",5);
@@ -23,11 +23,12 @@ rule "Shortness of breath (a)"
     	patient.editProb("Hyperapnea",1);
     	patient.editProb("Dysnea",-2);   
 end
-
-rule "Shortness of breath (b)"
+/*
+rule "Rapid breathing"
     dialect "java"
 
     when
+<<<<<<< HEAD
     	patient: PatientPojo(detectSym("shortness_breath") == true) && PatientPojo(detectSymSev("shortness_breath") >= 3) && PatientPojo(detectDrug("Betablockers") == true)
     then
         patient.editProb("Hypoxemia",7);
@@ -131,7 +132,12 @@ rule "Cyanosis (a)"
 
     when
     	patient: PatientPojo(detectSym("cyanosis") == true) && PatientPojo(detectSymSev("cyanosis") <= 2) && (PatientPojo(detectDrug("Antidepressives") == true) || PatientPojo(detectDrug("Antipsychotic") == true))
+=======
+    	disease: Disease()
+        symptom: Symptoms(Rapid_Breathing == true )
+>>>>>>> branch 'main' of https://github.com/AlfonsoGordonCC/AirCheck
     then
+<<<<<<< HEAD
     	patient.editProb("Hypoxemia",2);
     	patient.editProb("Tachypnea",1);
     	patient.editProb("Asthma",-1);
@@ -163,11 +169,28 @@ rule "Cyanosis (c)"
     	patient.editProb("Asthma",1);
     	patient.editProb("Dysnea",2);
     	patient.editProb("Atelectasis", 1);
+=======
+        disease.setHypoxemia(disease.getHypoxemia() + 3);
+        disease.setHyperapnea(disease.getHyperapnea() + 3);
+        disease.setTachypnea(disease.getTachypnea() + 3);
+        disease.setDysnea(disease.getDysnea() + 3);
+
+>>>>>>> branch 'main' of https://github.com/AlfonsoGordonCC/AirCheck
 end
 
+rule "Wheezing"
+    dialect "java"
 
-
-/*
+    when
+    	disease: Disease()
+        symptom: Symptoms(Wheezing == true )
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 2);
+        disease.setTachypnea(disease.getTachypnea() + 2);
+        disease.setDysnea(disease.getDysnea() + 2);
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 1);
+        disease.setLung_cancer(disease.getLung_cancer() + 1);
+end
 
 rule "Cyanosis"
     dialect "java"
