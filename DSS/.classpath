@@ -11,5 +11,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/DroolsExtended"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/drools"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/slf4"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
