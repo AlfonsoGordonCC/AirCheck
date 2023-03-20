@@ -23,117 +23,15 @@ rule "Shortness of breath"
     	patient.editProb("Hyperapnea",1);
     	patient.editProb("Dysnea",-2);   
 end
-
-rule "Shortness of breath (b)"
+/*
+rule "Rapid breathing"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("shortness_breath") == true) && PatientPojo(detectSymSev("shortness_breath") >= 3) && PatientPojo(detectDrug("Betablockers") == true)
-    then
-        patient.editProb("Hypoxemia",7);
-    	patient.editProb("Apnea",4);
-    	patient.editProb("Hyperapnea",3);
-    	patient.editProb("Dysnea",1);  
-
-end
-
-rule "Shortness of breath (c)"
-    dialect "java"
-
-    when
-    	patient: PatientPojo(detectSym("shortness_breath") == true) && PatientPojo(detectSymSev("shortness_breath") >= 3)
-    then
-        patient.editProb("Hypoxemia",9);
-    	patient.editProb("Apnea",6);
-    	patient.editProb("Hyperapnea",5);
-    	patient.editProb("Dysnea",3);  
-
-end
-
-rule "Rapid breathing (a)"
-    dialect "java"
-
-    when
-    	patient: PatientPojo(detectSym("rapid_breathing") == true) && (PatientPojo(detectSymSev("rapid_breathing") <= 2) || (PatientPojo(detectDrug("Bronchodilators") == true)) || PatientPojo(detectDrug("Stimulants") == true))
-    then
-        patient.editProb("Hypoxemia",1.4);
-    	patient.editProb("Tachypnea",1.4);
-    	patient.editProb("Hyperapnea",1.4);
-    	patient.editProb("Dysnea",1.4);
-end
-
-
-rule "Rapid breathing (b)"
-    dialect "java"
-
-    when
-    	patient: PatientPojo(detectSym("rapid_breathing") == true) && PatientPojo(detectSymSev("rapid_breathing") >= 3) && (PatientPojo(detectDrug("Bronchodilators") == true) || PatientPojo(detectDrug("Stimulants") == true))
-    then
-        patient.editProb("Hypoxemia",1.8);
-    	patient.editProb("Tachypnea",1.8);
-    	patient.editProb("Hyperapnea",1.8);
-    	patient.editProb("Dysnea",1.8);
-end
-
-rule "Rapid breathing (c)"
-    dialect "java"
-
-    when
-    	patient: PatientPojo(detectSym("rapid_breathing") == true) && PatientPojo(detectSymSev("rapid_breathing") >= 3)
-    then
-        patient.editProb("Hypoxemia",3);
-    	patient.editProb("Tachypnea",3);
-    	patient.editProb("Hyperapnea",3);
-    	patient.editProb("Dysnea",3);
-end
-
-rule "Wheezing (a)"
-    dialect "java"
-
-    when
-    	patient: PatientPojo(detectSym("wheezing") == true) &&  PatientPojo(detectSymSev("wheezing") <= 2) && (PatientPojo(detectDrug("Betablockers") == true) || PatientPojo(detectDrug("Nsaids") == true)) 
-    then
-        patient.editProb("Hypoxemia",0.5);
-    	patient.editProb("Tachypnea",0.5);
-    	patient.editProb("Lung_Cancer", -0.2);
-    	patient.editProb("Dysnea",0.5);
-    	patient.editProb("Respiratory_Insufficiency", 0.5);
-end
-
-rule "Wheezing (b)"
-    dialect "java"
-
-    when
-    	patient: PatientPojo(detectSym("wheezing") == true) && PatientPojo(detectSymSev("wheezing") >= 3)  && (PatientPojo(detectDrug("Betablockers") == true) || PatientPojo(detectDrug("Nsaids") == true))
-    then
-        patient.editProb("Hypoxemia",1);
-    	patient.editProb("Tachypnea",1);
-    	patient.editProb("Lung_Cancer", 0.5);
-    	patient.editProb("Dysnea",1);
-    	patient.editProb("Respiratory_Insufficiency", 0.5);
-end
-
-rule "Wheezing (c)"
-    dialect "java"
-
-    when
-    	patient: PatientPojo(detectSym("wheezing") == true) && PatientPojo(detectSymSev("wheezing") >= 3)  && (PatientPojo(detectDrug("Betablockers") == false) || PatientPojo(detectDrug("Nsaids") == false) || PatientPojo(detectDrug("Statins") == true)|| PatientPojo(detectDrug("Ace_Inhibitor") == true))
-    then
-        patient.editProb("Hypoxemia",1.8);
-    	patient.editProb("Tachypnea",1.8);
-    	patient.editProb("Lung_Cancer",0.8);
-    	patient.editProb("Dysnea",1.8);
-    	patient.editProb("Respiratory_Insufficiency", 0.8);
-end
-
-rule "Cyanosis (a)"
-    dialect "java"
-
-    when
-    	patient: PatientPojo(detectSym("cyanosis") == true) && PatientPojo(detectSymSev("cyanosis") <= 2) && (PatientPojo(detectDrug("Antidepressives") == true) || PatientPojo(detectDrug("Antipsychotic") == true))
     	disease: Disease()
         symptom: Symptoms(Rapid_Breathing == true )
     then
+<<<<<<< HEAD
     	patient.editProb("Hypoxemia",2);
     	patient.editProb("Tachypnea",1);
     	patient.editProb("Asthma",-1);
@@ -154,6 +52,7 @@ rule "Cyanosis (b)"
     	patient.editProb("Atelectasis", 0.5);
 end
 
+
 rule "Cyanosis (c)"
     dialect "java"
 
@@ -163,17 +62,27 @@ rule "Cyanosis (c)"
     	patient.editProb("Hypoxemia",3);
     	patient.editProb("Tachypnea",2);
     	patient.editProb("Asthma",1);
-    	patient.editProb("Dysnea",2);
+    	patient.editProb("Dysnea",3);
     	patient.editProb("Atelectasis", 1);
-        disease.setHypoxemia(disease.getHypoxemia() + 3);
-        disease.setHyperapnea(disease.getHyperapnea() + 3);
-        disease.setTachypnea(disease.getTachypnea() + 3);
-        disease.setDysnea(disease.getDysnea() + 3);
 
 end
 
+rule "Headache (a)"
+    dialect "java"
 
-rule "Headache"
+    when
+		patient: PatientPojo(detectSym("cyanosis") == true) && PatientPojo(detectSymSev("cyanosis") >= 3)
+
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 1);
+        disease.setCOVID(disease.getCOVID() + 2);
+        disease.setFlu(disease.getFlu() + 2);
+        disease.setApnea(disease.getApnea() + 2);
+        disease.setCold(disease.getCold() + 1);    
+
+end
+
+rule "Headache (b)"
     dialect "java"
 
     when
@@ -188,7 +97,61 @@ rule "Headache"
 
 end
 
+rule "Headache (c)"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Headache == true )
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 1);
+        disease.setCOVID(disease.getCOVID() + 2);
+        disease.setFlu(disease.getFlu() + 2);
+        disease.setApnea(disease.getApnea() + 2);
+        disease.setCold(disease.getCold() + 1);    
+=======
+        disease.setHypoxemia(disease.getHypoxemia() + 3);
+        disease.setHyperapnea(disease.getHyperapnea() + 3);
+        disease.setTachypnea(disease.getTachypnea() + 3);
+        disease.setDysnea(disease.getDysnea() + 3);
+>>>>>>> branch 'main' of https://github.com/AlfonsoGordonCC/AirCheck
+
+end
+
+<<<<<<< HEAD
+
+
 /*
+rule "Headache"
+=======
+rule "Wheezing"
+>>>>>>> branch 'main' of https://github.com/AlfonsoGordonCC/AirCheck
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Wheezing == true )
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 2);
+        disease.setTachypnea(disease.getTachypnea() + 2);
+        disease.setDysnea(disease.getDysnea() + 2);
+        disease.setRespiratory_Insufficiency(disease.getRespiratory_Insufficiency() + 1);
+        disease.setLung_cancer(disease.getLung_cancer() + 1);
+end
+
+rule "Cyanosis"
+    dialect "java"
+
+    when
+    	disease: Disease()
+        symptom: Symptoms(Cyanosis == true )
+    then
+        disease.setHypoxemia(disease.getHypoxemia() + 3);
+        disease.setTachypnea(disease.getTachypnea() + 2);
+        disease.setDysnea(disease.getDysnea() + 2);
+        disease.setAsthma(disease.getAsthma() + 1);
+        disease.setAtelactasis(disease.getAtelactasis() + 1);
+end
 
 rule "Headache"
     dialect "java"
