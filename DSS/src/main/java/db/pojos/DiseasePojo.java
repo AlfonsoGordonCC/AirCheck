@@ -2,7 +2,6 @@ package db.pojos;
 
 import java.io.Serializable;
 import java.util.List;
-import db.pojos.*;
 
 public class DiseasePojo implements Serializable{
 	
