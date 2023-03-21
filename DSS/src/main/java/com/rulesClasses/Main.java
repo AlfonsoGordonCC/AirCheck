@@ -123,6 +123,7 @@ public class Main {
     	final SymptomsPojo Wheezing = new SymptomsPojo(3,"wheezing", 0,listaDr,listaP,listaD);
     	final SymptomsPojo Cyanosis = new SymptomsPojo(4,"cyanosis", 0,listaDr,listaP,listaD);
     	final SymptomsPojo Headache = new SymptomsPojo(5,"headache", 0,listaDr,listaP,listaD);
+    	
     	final SymptomsPojo Confusion_Disorientation = new SymptomsPojo(6,"confusion_disorientation", 0,listaDr,listaP,listaD);
     	final SymptomsPojo Irregular_heartbeat = new SymptomsPojo(7,"irregular_heartbeat", 0,listaDr,listaP,listaD);
     	final SymptomsPojo Chest_pain = new SymptomsPojo(8,"chest_pain", 0,listaDr,listaP,listaD);
