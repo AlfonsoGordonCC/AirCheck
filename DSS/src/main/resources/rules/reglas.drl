@@ -174,7 +174,7 @@ rule "Cyanosis (a)"
     dialect "java"
 
     when
-    	patient: PatientPojo(detectSym("cyanosis") == true) && PatientPojo(detectSymSev("cyanosis") <= 2) && (PatientPojo(detectDrug("Antidepressives") == true) || PatientPojo(detectDrug("Antipsychotic") == true))
+    	patient: PatientPojo(detectSym("cyanosis") == true) && PatientPojo(detectSymSev("cyanosis") <= 2) && (PatientPojo(detectDrug("Betablockers") == false) || PatientPojo(detectDrug("Nsaids") == false) || PatientPojo(detectDrug("Statins") == true)|| PatientPojo(detectDrug("Ace_Inhibitor") == true))
     then
     	patient.editProb("Hypoxemia",2);
     	patient.editProb("Tachypnea",1);
@@ -209,20 +209,19 @@ rule "Cyanosis (c)"
     	patient.editProb("Atelectasis", 1);
 end
 
-
-/*
 rule "Headache (a)"
     dialect "java"
 
     when
-		patient: PatientPojo(detectSym("cyanosis") == true) && PatientPojo(detectSymSev("cyanosis") >= 3)
+		patient: PatientPojo(detectSym("headache") == true) && PatientPojo(detectSymSev("headache") <= 2) && PatientPojo(detectDrug("Betablockers") == true)
 
     then
-        disease.setHypoxemia(disease.getHypoxemia() + 1);
-        disease.setCOVID(disease.getCOVID() + 2);
-        disease.setFlu(disease.getFlu() + 2);
-        disease.setApnea(disease.getApnea() + 2);
-        disease.setCold(disease.getCold() + 1);    
+    	patient.editProb("Hypoxemia",0.5);
+    	patient.editProb("COVID",1.5);
+    	patient.editProb("Cold",0.5);
+    	patient.editProb("Apnea",1.5);
+    	patient.editProb("Flu", 1.5);
+  
 
 end
 
@@ -230,14 +229,14 @@ rule "Headache (b)"
     dialect "java"
 
     when
-    	disease: Disease()
-        symptom: Symptoms(Headache == true )
+		patient: PatientPojo(detectSym("headache") == true) && PatientPojo(detectSymSev("headache") >=3) && PatientPojo(detectDrug("Betablockers") == true)
+
     then
-        disease.setHypoxemia(disease.getHypoxemia() + 1);
-        disease.setCOVID(disease.getCOVID() + 2);
-        disease.setFlu(disease.getFlu() + 2);
-        disease.setApnea(disease.getApnea() + 2);
-        disease.setCold(disease.getCold() + 1);    
+    	patient.editProb("Hypoxemia",0.8);
+    	patient.editProb("COVID",1.8);
+    	patient.editProb("Cold",0.8);
+    	patient.editProb("Apnea",1.8);
+    	patient.editProb("Flu", 1.8);  
 
 end
 
@@ -245,20 +244,57 @@ rule "Headache (c)"
     dialect "java"
 
     when
-    	disease: Disease()
-        symptom: Symptoms(Headache == true )
+		patient: PatientPojo(detectSym("headache") == true) && PatientPojo(detectSymSev("headache") >= 3)
+
     then
-        disease.setHypoxemia(disease.getHypoxemia() + 1);
-        disease.setCOVID(disease.getCOVID() + 2);
-        disease.setFlu(disease.getFlu() + 2);
-        disease.setApnea(disease.getApnea() + 2);
-        disease.setCold(disease.getCold() + 1);    
-        disease.setHypoxemia(disease.getHypoxemia() + 3);
-        disease.setHyperapnea(disease.getHyperapnea() + 3);
-        disease.setTachypnea(disease.getTachypnea() + 3);
-        disease.setDysnea(disease.getDysnea() + 3);
+    	patient.editProb("Hypoxemia",1);
+    	patient.editProb("COVID",2);
+    	patient.editProb("Cold",1);
+    	patient.editProb("Apnea",2);
+    	patient.editProb("Flu", 2);
 
 end
+
+rule "Confusion or Disorientation (a)"
+    dialect "java"
+
+    when
+		patient: PatientPojo(detectSym("confusion_disorientation") == true) && PatientPojo(detectSymSev("confusion_disorientation") <= 2) && (PatientPojo(detectDrug("Betablockers") == false) || PatientPojo(detectDrug("Nsaids") == false) || PatientPojo(detectDrug("Statins") == true) || PatientPojo(detectDrug("Ace_Inhibitor") == true) || PatientPojo(detectDrug("Opioids") == true) || PatientPojo(detectDrug("Antidepressant") == true) || PatientPojo(detectDrug("Antipsychotic") == true))
+  
+    then
+    	patient.editProb("Hypoxemia",0.5);
+    	patient.editProb("Respiratory_Insuficiency",0.5);
+    	patient.editProb("Pneumonia",0.5);
+
+end
+
+rule "Confusion or Disorientation (b)"
+    dialect "java"
+
+    when
+		patient: PatientPojo(detectSym("confusion_disorientation") == true) && PatientPojo(detectSymSev("confusion_disorientation") >= 3) && (PatientPojo(detectDrug("Betablockers") == false) || PatientPojo(detectDrug("Nsaids") == false) || PatientPojo(detectDrug("Statins") == true) || PatientPojo(detectDrug("Ace_Inhibitor") == true) || PatientPojo(detectDrug("Opioids") == true) || PatientPojo(detectDrug("Antidepressant") == true) || PatientPojo(detectDrug("Antipsychotic") == true))
+  
+    then
+    	patient.editProb("Hypoxemia",1.5);
+    	patient.editProb("Respiratory_Insuficiency",1.5);
+    	patient.editProb("Pneumonia",1.5);
+
+end
+
+rule "Confusion or Disorientation (c)"
+    dialect "java"
+
+    when
+		patient: PatientPojo(detectSym("confusion_disorientation") == true) && PatientPojo(detectSymSev("confusion_disorientation") >= 3) 
+
+    then
+    	patient.editProb("Hypoxemia",2);
+    	patient.editProb("Respiratory_Insuficiency",2);
+    	patient.editProb("Pneumonia",2);
+
+end
+
+
 
 
 
